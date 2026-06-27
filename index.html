@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ===== SEO META TAGS (se actualizan con JS según idioma) ===== -->
+    <title id="meta-title">Samuel Peña | Freelance Full-Stack Web Developer</title>
+    <meta id="meta-desc" name="description"
+        content="Portfolio of Samuel Peña, software developer with over 2 years of experience in web applications. Specialist in PHP, React, Next.js and PostgreSQL." />
+    <meta name="keywords" content="web developer, full-stack, PHP, React, Next.js, PostgreSQL, freelance, Venezuela" />
+    <meta name="author" content="Samuel Peña" />
+    <link rel="canonical" href="https://tu-dominio.com/" />
+
+    <!-- ===== OPEN GRAPH / TWITTER ===== -->
+    <meta property="og:title" id="og-title" content="Samuel Peña | Freelance Full-Stack Web Developer" />
+    <meta property="og:description" id="og-desc"
+        content="Portfolio of Samuel Peña, software developer with over 2 years of experience in web applications." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-dominio.com/" />
+    <meta property="og:image" content="https://tu-dominio.com/assets/img/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" id="tw-title" content="Samuel Peña | Freelance Full-Stack Web Developer" />
+    <meta name="twitter:description" id="tw-desc"
+        content="Portfolio of Samuel Peña, software developer with over 2 years of experience in web applications." />
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- ===== FUENTES Y PRECONNECT ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- ===== TAILWIND ===== -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#9ffa43",
+                        "on-primary": "#1c3700",
+                        "surface-container-low": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-primary-fixed": "#0e2000",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#c0cab0",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-dim": "#121414",
+                        "secondary": "#c8c6c5",
+                        "on-tertiary": "#303030",
+                        "inverse-on-surface": "#2f3131",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-primary-fixed-variant": "#2a5000",
+                        "on-secondary-fixed-variant": "#474746",
+                        "outline": "#8a947c",
+                        "on-primary-container": "#3e7100",
+                        "on-secondary": "#313030",
+                        "secondary-container": "#474746",
+                        "on-background": "#e2e2e2",
+                        "surface-container": "#1e2020",
+                        "on-secondary-container": "#b7b5b4",
+                        "tertiary-container": "#e4e2e1",
+                        "surface-container-lowest": "#0c0f0f",
+                        "tertiary": "#ffffff",
+                        "inverse-surface": "#e2e2e2",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface": "#121414",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#e4e2e1",
+                        "primary-container": "#9ffa43",
+                        "outline-variant": "#404a36",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-bright": "#37393a",
+                        "surface-variant": "#333535",
+                        "surface-tint": "#84dd23",
+                        "on-tertiary-container": "#656464",
+                        "primary": "#ffffff",
+                        "surface-container-highest": "#333535",
+                        "on-surface": "#e2e2e2",
+                        "on-error": "#690005",
+                        "inverse-primary": "#3a6a00",
+                        "primary-fixed-dim": "#84dd23",
+                        "surface-container-high": "#282a2b",
+                        "background": "#121414"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        "stack-sm": "8px",
+                        "section-padding": "120px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "grid-margin": "40px",
+                        "gutter": "24px"
+                    },
+                    fontFamily: {
+                        "headline-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "body-md": ["Inter"]
+                    },
+                    fontSize: {
+                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- ===== ESTILOS PERSONALIZADOS ===== -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+    <!-- ==================== HEADER / NAV ==================== -->
+    <header role="banner" class="sticky top-0 z-50 border-b border-outline-variant bg-background/90 backdrop-blur-sm">
+        <nav role="navigation" aria-label="Main navigation"
+            class="flex justify-between items-center w-full px-grid-margin py-stack-md max-w-full mx-auto">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary-fixed" data-icon="architecture" data-weight="fill"
+                    style="font-variation-settings:'FILL'1;">architecture</span>
+                <span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Samuel
+                    Peña</span>
+            </div>
+
+            <!-- Enlaces (escritorio) -->
+            <ul class="hidden md:flex gap-8" role="menubar">
+                <li role="none"><a href="#hero"
+                        class="nav-link font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary-fixed pb-1 scale-95 active:scale-90 transition-transform"
+                        data-target="hero" role="menuitem" data-i18n="nav-home">Inicio</a></li>
+                <li role="none"><a href="#about"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
+                        data-target="about" role="menuitem" data-i18n="nav-about">Sobre Mí</a></li>
+                <li role="none"><a href="#skills"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
+                        data-target="skills" role="menuitem" data-i18n="nav-skills">Skills</a></li>
+                <li role="none"><a href="#experience"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
+                        data-target="experience" role="menuitem" data-i18n="nav-experience">Experiencia</a></li>
+                <li role="none"><a href="#projects"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
+                        data-target="projects" role="menuitem" data-i18n="nav-projects">Proyectos</a></li>
+            </ul>
+
+            <!-- Acciones: toggle idioma + contacto + hamburguesa -->
+            <div class="flex items-center gap-4">
+                <!-- Selector de idioma -->
+                <button id="lang-toggle"
+                    class="flex items-center gap-1 text-xs font-bold text-primary-fixed border border-primary-fixed rounded-full px-3 py-1 hover:bg-primary-fixed/10 transition-colors"
+                    aria-label="Toggle language">
+                    <span id="lang-label">EN</span>
+                    <span class="material-symbols-outlined text-sm">language</span>
+                </button>
+
+                <div class="hidden lg:flex items-center gap-2 px-4 py-2 brutalist-border rounded-sm">
+                    <span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(159,250,67,0.8)]"></span>
+                    <span class="font-label-caps text-label-caps text-primary-fixed"
+                        data-i18n="hero-availability">Disponible</span>
+                </div>
+                <a href="#contact"
+                    class="bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm flex items-center gap-2"
+                    data-i18n="nav-contact-btn">
+                    Contactar
+                </a>
+                <!-- Botón hamburguesa -->
+                <button id="hamburger-btn" class="md:hidden flex flex-col gap-1 p-2"
+                    aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="block w-6 h-0.5 bg-primary"></span>
+                    <span class="block w-6 h-0.5 bg-primary"></span>
+                    <span class="block w-6 h-0.5 bg-primary"></span>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Menú móvil -->
+        <div id="mobile-menu"
+            class="md:hidden bg-surface-container-low border-b border-outline-variant px-6 py-4 hidden" role="menu"
+            aria-label="Mobile menu">
+            <ul class="flex flex-col gap-4">
+                <li><a href="#hero"
+                        class="nav-link font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary-fixed pb-1"
+                        data-target="hero" data-i18n="nav-home">Inicio</a></li>
+                <li><a href="#about"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
+                        data-target="about" data-i18n="nav-about">Sobre Mí</a></li>
+                <li><a href="#skills"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
+                        data-target="skills" data-i18n="nav-skills">Skills</a></li>
+                <li><a href="#experience"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
+                        data-target="experience" data-i18n="nav-experience">Experiencia</a></li>
+                <li><a href="#projects"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
+                        data-target="projects" data-i18n="nav-projects">Proyectos</a></li>
+                <li><a href="#footer"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
+                        data-target="footer" data-i18n="nav-contact">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN ==================== -->
+    <main id="main-content" role="main">
+
+        <!-- ===== HERO ===== -->
+        <section id="hero"
+            class="relative min-h-[921px] flex flex-col justify-center px-grid-margin border-b border-[#262626] overflow-hidden">
+            <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-12 gap-gutter pt-20 pb-32">
+                <div class="col-span-12 lg:col-span-10 xl:col-span-9">
+                    <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-12"
+                        data-i18n="hero-title">
+                        Transforming ideas into <br />scalable and efficient web applications
+                    </h1>
+                </div>
+                <div class="col-span-12 lg:col-span-5 lg:col-start-8 xl:col-span-4 xl:col-start-9 mt-12 lg:mt-0">
+                    <div
+                        class="brutalist-border p-6 relative bg-surface-container-low/50 backdrop-blur-sm corner-bracket-tl corner-bracket-br">
+                        <p class="font-body-lg text-body-lg text-on-surface mb-8" data-i18n="hero-desc">
+                            Hi, I'm Samuel Peña, a Full-Stack Jr. Developer and Freelance Software Developer from
+                            Venezuela. With over 2 years of experience, I specialize in building robust web solutions,
+                            from backend to dynamic user interfaces.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects"
+                                class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-4 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm gap-2">
+                                <span data-i18n="hero-btn-projects">View Projects</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                            <a href="#contact"
+                                class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-6 py-4 hover:bg-surface-container-low transition-colors rounded-sm gap-2">
+                                <span data-i18n="hero-btn-contact">Contact</span>
+                                <span class="material-symbols-outlined text-[18px]">mail</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-12 left-grid-margin flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(159,250,67,0.8)]"></span>
+                <span class="font-label-caps text-label-caps text-on-surface-variant"
+                    data-i18n="hero-availability">Available for new projects</span>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="py-section-padding px-grid-margin border-b border-[#262626] relative dot-grid">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <span
+                        class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                        data-i18n="about-badge">[ ABOUT ]</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary max-w-4xl"
+                        data-i18n="about-title">
+                        Higher University Technician in Computer Science, passionate about clean code and agile
+                        solutions.
+                    </h2>
+                </div>
+                <div class="grid grid-cols-12 gap-gutter items-center">
+                    <div class="col-span-12 md:col-span-4 order-2 md:order-1 flex flex-col justify-between h-full py-8">
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-12" data-i18n="about-text1">
+                            I graduated from the Jesús Obrero University Institute (IUJO) in May 2026. At 21, I'm
+                            passionate about solving complex problems through clean code and agile implementations. I'm
+                            bilingual, fluent in Spanish (Native) and English (C1), which allows me to collaborate
+                            effectively in international teams. Outside of commercial programming, I dedicate time to
+                            volunteering, contributing my technical knowledge to social impact causes.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="mailto:penagoyosamueldavid@gmail.com" aria-label="Email"
+                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </a>
+                            <a href="https://github.com/StonishVicer" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub"
+                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined">code</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn"
+                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm">
+                                <span class="material-symbols-outlined">badge</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-4 order-1 md:order-2 relative px-4">
+                        <div class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br">
+                            <img class="w-full h-auto object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
+                                src="https://picsum.photos/seed/samuel/600/600"
+                                alt="Samuel Peña, full-stack developer, portrait" loading="lazy" />
+                        </div>
+                    </div>
+                    <div class="col-span-12 md:col-span-4 order-3 flex flex-col justify-end h-full py-8">
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-8" data-i18n="about-text2">
+                            My technical training and practical experience have allowed me to lead projects from
+                            database design to responsive interface implementation. I believe in user-centered
+                            development and continuous improvement.
+                        </p>
+                        <div>
+                            <a href="#projects"
+                                class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-4 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm gap-2">
+                                <span data-i18n="about-btn">View Projects</span>
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== (6 bloques) -->
+        <section id="skills" class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span
+                        class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                        data-i18n="skills-badge">[ SKILLS ]</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
+                        data-i18n="skills-title">Skills &amp; Technologies</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Bloque 1: Lenguajes -->
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-3xl">code</span>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-lang-title">Programming
+                                Languages</h4>
+                        </div>
+                        <ul class="text-on-surface-variant space-y-1 text-sm">
+                            <li data-i18n="skills-lang-1">PHP</li>
+                            <li data-i18n="skills-lang-2">JavaScript (ES6+) / TypeScript</li>
+                            <li data-i18n="skills-lang-3">SQL, HTML5, CSS3</li>
+                            <li data-i18n="skills-lang-4">Python (basic)</li>
+                        </ul>
+                    </div>
+                    <!-- Bloque 2: Frontend -->
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-3xl">web</span>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-front-title">Frontend Frameworks
+                            </h4>
+                        </div>
+                        <ul class="text-on-surface-variant space-y-1 text-sm">
+                            <li data-i18n="skills-front-1">React / Next.js</li>
+                            <li data-i18n="skills-front-2">Vue.js (basic)</li>
+                            <li data-i18n="skills-front-3">Tailwind CSS / Bootstrap</li>
+                            <li data-i18n="skills-front-4">Responsive Design</li>
+                        </ul>
+                    </div>
+                    <!-- Bloque 3: Backend -->
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-3xl">dns</span>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-back-title">Backend &amp; APIs
+                            </h4>
+                        </div>
+                        <ul class="text-on-surface-variant space-y-1 text-sm">
+                            <li data-i18n="skills-back-1">Laravel / PHP</li>
+                            <li data-i18n="skills-back-2">Node.js (Express)</li>
+                            <li data-i18n="skills-back-3">RESTful APIs / GraphQL</li>
+                            <li data-i18n="skills-back-4">WordPress / Headless CMS</li>
+                        </ul>
+                    </div>
+                    <!-- Bloque 4: Bases de datos -->
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-3xl">database</span>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-db-title">Databases &amp;
+                                Storage</h4>
+                        </div>
+                        <ul class="text-on-surface-variant space-y-1 text-sm">
+                            <li data-i18n="skills-db-1">PostgreSQL / MySQL</li>
+                            <li data-i18n="skills-db-2">Supabase / Firebase</li>
+                            <li data-i18n="skills-db-3">MongoDB (basic)</li>
+                            <li data-i18n="skills-db-4">SQL optimization</li>
+                        </ul>
+                    </div>
+                    <!-- Bloque 5: DevOps / Herramientas -->
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-3xl">build</span>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-tools-title">DevOps &amp; Tools
+                            </h4>
+                        </div>
+                        <ul class="text-on-surface-variant space-y-1 text-sm">
+                            <li data-i18n="skills-tools-1">Git / GitHub / GitLab</li>
+                            <li data-i18n="skills-tools-2">Docker (basic)</li>
+                            <li data-i18n="skills-tools-3">CI/CD (GitHub Actions)</li>
+                            <li data-i18n="skills-tools-4">Vercel / Netlify / AWS</li>
+                        </ul>
+                    </div>
+                    <!-- Bloque 6: Metodologías y competencias -->
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-3xl">psychology</span>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-meth-title">Methodologies &amp;
+                                Soft Skills</h4>
+                        </div>
+                        <ul class="text-on-surface-variant space-y-1 text-sm">
+                            <li data-i18n="skills-meth-1">Agile (Scrum / Kanban)</li>
+                            <li data-i18n="skills-meth-2">AI-assisted development</li>
+                            <li data-i18n="skills-meth-3">Technical SEO / Performance</li>
+                            <li data-i18n="skills-meth-4">CRM Automation (HubSpot, GoHighLevel)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience"
+            class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
+                    <div>
+                        <span
+                            class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                            data-i18n="exp-badge">[ EXPERIENCE ]</span>
+                        <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
+                            data-i18n="exp-title">Professional Experience</h2>
+                    </div>
+                    <p class="font-body-md text-on-surface-variant max-w-sm mt-4 md:mt-0 text-left md:text-right"
+                        data-i18n="exp-sub">Collaborations with digital agencies and international teams.</p>
+                </div>
+
+                <div class="brutalist-border border-[#262626] p-4 relative dot-grid">
+                    <div class="flex flex-col w-full">
+                        <!-- Experiencia 1 -->
+                        <div class="experience-item flex flex-col sm:flex-row justify-between items-start sm:items-center py-6 px-6 border-b border-[#262626] cursor-pointer transition-colors"
+                            data-index="0">
+                            <div class="flex items-center gap-8 mb-4 sm:mb-0 w-full sm:w-1/3">
+                                <span class="font-label-caps text-on-surface-variant">[ 01 ]</span>
+                                <h4 class="font-headline-md text-primary" data-i18n="exp-1-title">Full-Stack Developer
+                                    Intern</h4>
+                            </div>
+                            <div class="w-full sm:w-1/6 mb-2 sm:mb-0 text-on-surface-variant">
+                                <span class="text-xs opacity-70 block mb-1" data-i18n="exp-company">Company</span>
+                                <span data-i18n="exp-1-company">Keycode Agencia Digital</span>
+                            </div>
+                            <div class="w-full sm:w-1/6 mb-2 sm:mb-0 text-on-surface-variant">
+                                <span class="text-xs opacity-70 block mb-1" data-i18n="exp-date">Date</span>
+                                <span data-i18n="exp-1-date">Feb 2026 – May 2026</span>
+                            </div>
+                            <div class="w-full sm:w-1/6 text-left sm:text-right text-on-surface-variant">
+                                <span class="text-xs opacity-70 block mb-1" data-i18n="exp-location">Location</span>
+                                <span data-i18n="exp-1-location">Remote, Mexico</span>
+                            </div>
+                        </div>
+                        <div class="exp-details px-6 py-4 border-b border-[#262626]">
+                            <ul class="list-disc list-inside text-on-surface-variant space-y-2">
+                                <li data-i18n="exp-1-desc1">Developed a multi-tenant SaaS payroll module ("Dash") with
+                                    Next.js and Supabase, using RLS for data isolation.</li>
+                                <li data-i18n="exp-1-desc2">Built a corporate Wiki using Nextra JS and React,
+                                    streamlining the onboarding process and knowledge transfer.</li>
+                                <li data-i18n="exp-1-desc3">Conducted technical SEO audits and set up automations in
+                                    GoHighLevel CRM to improve sales response.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Experiencia 2 -->
+                        <div class="experience-item flex flex-col sm:flex-row justify-between items-start sm:items-center py-6 px-6 border-b border-[#262626] cursor-pointer transition-colors"
+                            data-index="1">
+                            <div class="flex items-center gap-8 mb-4 sm:mb-0 w-full sm:w-1/3">
+                                <span class="font-label-caps text-on-surface-variant">[ 02 ]</span>
+                                <h4 class="font-headline-md text-primary" data-i18n="exp-2-title">Web Developer &amp;
+                                    Community Manager</h4>
+                            </div>
+                            <div class="w-full sm:w-1/6 mb-2 sm:mb-0 text-on-surface-variant">
+                                <span class="text-xs opacity-70 block mb-1" data-i18n="exp-company">Company</span>
+                                <span data-i18n="exp-2-company">The Loctor Family of REALTORS®</span>
+                            </div>
+                            <div class="w-full sm:w-1/6 mb-2 sm:mb-0 text-on-surface-variant">
+                                <span class="text-xs opacity-70 block mb-1" data-i18n="exp-date">Date</span>
+                                <span data-i18n="exp-2-date">Oct 2024 – May 2026</span>
+                            </div>
+                            <div class="w-full sm:w-1/6 text-left sm:text-right text-on-surface-variant">
+                                <span class="text-xs opacity-70 block mb-1" data-i18n="exp-location">Location</span>
+                                <span data-i18n="exp-2-location">Remote, US</span>
+                            </div>
+                        </div>
+                        <div class="exp-details px-6 py-4">
+                            <ul class="list-disc list-inside text-on-surface-variant space-y-2">
+                                <li data-i18n="exp-2-desc1">Architected a custom real estate platform with WordPress and
+                                    PHP, migrating legacy systems to an IDX-ready architecture.</li>
+                                <li data-i18n="exp-2-desc2">Integrated HubSpot CRM via REST APIs and custom templates,
+                                    resolving CSS conflicts for full mobile adaptability.</li>
+                                <li data-i18n="exp-2-desc3">Managed digital presence through asynchronous workflows to
+                                    drive lead generation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects"
+            class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
+            <div class="max-w-7xl mx-auto flex flex-col items-center">
+                <div class="text-center mb-20 max-w-3xl">
+                    <span
+                        class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                        data-i18n="projects-badge">[ PROJECTS ]</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+                        data-i18n="projects-title">Selected Projects</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="projects-sub">Web solutions
+                        that combine robust architecture, user experience, and measurable results.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter w-full mb-16">
+                    <!-- Proyecto 1 -->
+                    <div class="flex flex-col group cursor-pointer">
+                        <div
+                            class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br mb-6 overflow-hidden bg-surface-container-low">
+                            <img alt="AudiovisualPro project screenshot"
+                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transform"
+                                src="https://picsum.photos/seed/audiovisual/600/400" loading="lazy" />
+                            <div
+                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <a href="https://github.com/StonishVicer/audiovisualpro"
+                                    class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold gap-2">
+                                    <span data-i18n="projects-view">View on GitHub</span>
+                                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-1-title">AudiovisualPro
+                            (Rental System)</h3>
+                        <p class="font-body-md text-on-surface-variant" data-i18n="project-1-role"><span
+                                class="font-semibold">Role:</span> Full-Stack Developer (Remote, Aug 2025 – Dec 2025)
+                        </p>
+                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-1-desc">Built a reactive
+                            rental platform and a secure backend with a PHP/PostgreSQL REST API for equipment
+                            scheduling. Implemented Role-Based Access Control (RBAC), reducing manual administrative
+                            workflows by 30%.</p>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="flex flex-col group cursor-pointer mt-12 md:mt-24">
+                        <div
+                            class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br mb-6 overflow-hidden bg-surface-container-low">
+                            <img alt="Heaven Graphics project screenshot"
+                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transform"
+                                src="https://picsum.photos/seed/heaven/600/400" loading="lazy" />
+                            <div
+                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <a href="#"
+                                    class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold gap-2">
+                                    <span data-i18n="projects-view">View on GitHub</span>
+                                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-2-title">Heaven Graphics
+                        </h3>
+                        <p class="font-body-md text-on-surface-variant" data-i18n="project-2-role"><span
+                                class="font-semibold">Role:</span> Technical Lead (Pre-Internship) (Remote, Aug 2024 –
+                            Nov 2024)</p>
+                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-2-desc">Designed a CRUD
+                            inventory system with PHP and MySQL that reduced stock discrepancies from 15% to less than
+                            3%. Automated data entry by 50%, delivering a Minimum Viable Product (MVP) that optimized
+                            warehouse delivery times.</p>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="#"
+                        class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-8 py-4 hover:bg-surface-container-low transition-colors rounded-sm">
+                        <span data-i18n="projects-all">View all projects</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VOLUNTEERING ===== -->
+        <section id="volunteering"
+            class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-surface-container-lowest">
+            <div class="max-w-7xl mx-auto grid grid-cols-12 gap-gutter items-center">
+                <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+                    <span
+                        class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                        data-i18n="vol-badge">[ VOLUNTEERING ]</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+                        data-i18n="vol-title">Social Impact</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="vol-sub">Bringing technology
+                        and training to communities in need.</p>
+                </div>
+                <div class="col-span-12 md:col-span-8">
+                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-start gap-4 mb-4">
+                            <span
+                                class="material-symbols-outlined text-primary-fixed text-3xl">volunteer_activism</span>
+                            <h3 class="font-headline-md text-primary" data-i18n="vol-role">IT Support Volunteer</h3>
+                        </div>
+                        <p class="font-body-md text-on-surface-variant mb-2" data-i18n="vol-org"><span
+                                class="font-semibold">Venezuelan Red Cross</span> · Aug 2025 – Dec 2025 · Barquisimeto,
+                            Venezuela</p>
+                        <ul class="list-disc list-inside text-on-surface-variant space-y-2">
+                            <li data-i18n="vol-desc1">Restored over 12 obsolete workstations, extending critical
+                                hardware lifespan by approximately 2 years to support relief operations.</li>
+                            <li data-i18n="vol-desc2">Led 4 digital literacy workshops for over 20 staff members,
+                                improving operational efficiency and administrative workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT + FORM ===== -->
+        <section id="contact"
+            class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
+            <div class="max-w-7xl mx-auto grid grid-cols-12 gap-gutter">
+                <div class="col-span-12 md:col-span-5">
+                    <span
+                        class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                        data-i18n="contact-badge">[ CONTACT ]</span>
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+                        data-i18n="contact-title">Let's talk about your next project</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8" data-i18n="contact-desc">
+                        I'm always open to discussing new opportunities, collaborations, or just chatting about
+                        technology. Fill in the form and I'll get back to you as soon as possible.
+                    </p>
+                    <div class="flex flex-col gap-4 text-on-surface-variant">
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary-fixed">email</span>
+                            <a href="mailto:penagoyosamueldavid@gmail.com"
+                                class="hover:text-primary-fixed transition-colors">penagoyosamueldavid@gmail.com</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary-fixed">call</span>
+                            <a href="tel:+584245218811" class="hover:text-primary-fixed transition-colors">(+58)
+                                424-5218811</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-primary-fixed">location_on</span>
+                            <span>Venezuela (Remote)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="col-span-12 md:col-span-7">
+                    <form id="contact-form" action="https://formspree.io/f/mgojklyw" method="POST"
+                        class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
+                        <div class="mb-4">
+                            <label for="name"
+                                class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"
+                                data-i18n="form-name">Name *</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-transparent border border-outline-variant rounded-sm px-4 py-2 text-on-surface focus:border-primary-fixed focus:outline-none"
+                                placeholder="Your full name" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="email"
+                                class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"
+                                data-i18n="form-email">Email *</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-transparent border border-outline-variant rounded-sm px-4 py-2 text-on-surface focus:border-primary-fixed focus:outline-none"
+                                placeholder="you@example.com" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject"
+                                class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"
+                                data-i18n="form-subject">Subject</label>
+                            <input type="text" id="subject" name="subject"
+                                class="w-full bg-transparent border border-outline-variant rounded-sm px-4 py-2 text-on-surface focus:border-primary-fixed focus:outline-none"
+                                placeholder="What's this about?" />
+                        </div>
+                        <div class="mb-4">
+                            <label for="message"
+                                class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-1"
+                                data-i18n="form-message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full bg-transparent border border-outline-variant rounded-sm px-4 py-2 text-on-surface focus:border-primary-fixed focus:outline-none resize-y"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button type="submit"
+                                class="bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-8 py-3 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm flex items-center gap-2">
+                                <span data-i18n="form-send">Send message</span>
+                                <span class="material-symbols-outlined text-[18px]">send</span>
+                            </button>
+                            <span id="form-status" class="text-sm text-on-surface-variant"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA BANNER (original) ===== -->
+        <section class="py-12 px-grid-margin bg-background relative z-10 border-b border-[#262626]">
+            <div class="max-w-7xl mx-auto">
+                <div
+                    class="bg-primary-fixed text-on-primary-fixed py-24 px-8 text-center relative dot-grid brutalist-border border-[#262626]">
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-display-lg mb-6 max-w-3xl mx-auto tracking-tight"
+                        data-i18n="cta-title">
+                        Ready to work together?
+                    </h2>
+                    <p class="font-body-md max-w-2xl mx-auto mb-10 opacity-90" data-i18n="cta-desc">
+                        If you're looking for a proactive developer to boost your team or carry out your next software.
+                    </p>
+                    <a href="#contact"
+                        class="inline-flex items-center justify-center bg-background text-primary font-label-caps text-label-caps uppercase px-8 py-4 font-bold hover:bg-surface-container-low transition-colors rounded-sm gap-2">
+                        <span data-i18n="cta-btn">Start a conversation</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="footer" role="contentinfo"
+        class="bg-background w-full relative flat no shadows grid grid-cols-12 gap-gutter px-grid-margin py-section-padding">
+        <div class="col-span-12 md:col-span-4 mb-8 md:mb-0 flex flex-col justify-between">
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="material-symbols-outlined text-primary-fixed text-3xl" data-icon="architecture"
+                        data-weight="fill" style="font-variation-settings:'FILL'1;">architecture</span>
+                    <span class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">Samuel
+                        Peña</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-sm" data-i18n="footer-desc">
+                    Full-Stack Jr. Developer specialized in scalable and efficient web applications.
+                </p>
+                <div class="mt-4 flex gap-4">
+                    <a href="mailto:penagoyosamueldavid@gmail.com"
+                        class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                        aria-label="Email"><span class="material-symbols-outlined">email</span></a>
+                    <a href="tel:+584245218811"
+                        class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                        aria-label="Phone"><span class="material-symbols-outlined">call</span></a>
+                    <a href="https://github.com/StonishVicer" target="_blank" rel="noopener noreferrer"
+                        class="text-on-surface-variant hover:text-primary-fixed transition-colors"
+                        aria-label="GitHub"><span class="material-symbols-outlined">code</span></a>
+                </div>
+            </div>
+            <p class="font-label-caps text-label-caps text-on-surface-variant mt-12 md:mt-0 opacity-50"
+                data-i18n="footer-copy">
+                &copy; 2026 Samuel Peña. All rights reserved.
+            </p>
+        </div>
+
+        <div class="col-span-6 md:col-span-4 border-l border-[#262626] pl-8">
+            <h4 class="font-body-md font-bold text-on-surface mb-6" data-i18n="footer-nav">Navigation</h4>
+            <ul class="space-y-4">
+                <li><a href="#hero"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-home">Home <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
+                <li><a href="#about"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-about">About <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
+                <li><a href="#skills"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-skills">Skills <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
+                <li><a href="#experience"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-exp">Experience <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
+                <li><a href="#projects"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-projects">Projects <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
+            </ul>
+        </div>
+
+        <div class="col-span-6 md:col-span-4 border-l border-[#262626] pl-8">
+            <h4 class="font-body-md font-bold text-on-surface mb-6" data-i18n="footer-contact">Contact</h4>
+            <ul class="space-y-4 text-on-surface-variant">
+                <li><span class="font-label-caps text-label-caps opacity-70"
+                        data-i18n="footer-email-label">Email</span><br /><a href="mailto:penagoyosamueldavid@gmail.com"
+                        class="hover:text-primary-fixed transition-colors">penagoyosamueldavid@gmail.com</a></li>
+                <li><span class="font-label-caps text-label-caps opacity-70"
+                        data-i18n="footer-phone-label">Phone</span><br /><a href="tel:+584245218811"
+                        class="hover:text-primary-fixed transition-colors">(+58) 424-5218811</a></li>
+                <li><span class="font-label-caps text-label-caps opacity-70"
+                        data-i18n="footer-github-label">GitHub</span><br /><a href="https://github.com/StonishVicer"
+                        target="_blank" rel="noopener noreferrer"
+                        class="hover:text-primary-fixed transition-colors">Stonish Vicer</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- ===== JS ===== -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>

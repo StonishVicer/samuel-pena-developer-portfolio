@@ -1,0 +1,150 @@
+/* ============================================
+   Estilos personalizados (complemento a Tailwind)
+   ============================================ */
+
+/* --- Utilidades de bordes brutalistas --- */
+.brutalist-border {
+    border: 1px solid #262626;
+}
+
+.brutalist-border-t {
+    border-top: 1px solid #262626;
+}
+
+.brutalist-border-b {
+    border-bottom: 1px solid #262626;
+}
+
+.brutalist-border-l {
+    border-left: 1px solid #262626;
+}
+
+.brutalist-border-r {
+    border-right: 1px solid #262626;
+}
+
+/* --- Esquinas con brackets --- */
+.corner-bracket-tl::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #9ffa43;
+    border-left: 1px solid #9ffa43;
+}
+
+.corner-bracket-tr::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #9ffa43;
+    border-right: 1px solid #9ffa43;
+}
+
+.corner-bracket-bl::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #9ffa43;
+    border-left: 1px solid #9ffa43;
+}
+
+.corner-bracket-br::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid #9ffa43;
+    border-right: 1px solid #9ffa43;
+}
+
+/* --- Fondo de puntos (dot-grid) --- */
+.dot-grid {
+    background-image: radial-gradient(#262626 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+
+/* --- Scroll suave --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Animación fade-in --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Imágenes responsivas --- */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Enfoque visible --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #9ffa43;
+    outline-offset: 2px;
+}
+
+/* --- Estilos para el formulario --- */
+#contact-form input,
+#contact-form textarea {
+    background-color: transparent;
+    color: #e2e2e2;
+}
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #8a947c;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #9ffa43;
+}
+
+/* --- Transición suave para los ítems de experiencia --- */
+.experience-item {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.experience-item.active {
+    background-color: #9ffa43;
+    color: #0e2000;
+}
+
+.experience-item.active .font-headline-md,
+.experience-item.active .font-label-caps,
+.experience-item.active span,
+.experience-item.active .text-on-surface-variant {
+    color: #0e2000 !important;
+}
+
+.experience-item.active .text-primary {
+    color: #0e2000 !important;
+}
+
+/* Ajuste para que los corchetes no se rompan en móvil */
+.experience-item .font-label-caps {
+    white-space: nowrap;
+}
