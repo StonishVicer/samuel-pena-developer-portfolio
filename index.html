@@ -1,12 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- ===== SEO META TAGS (se actualizan con JS según idioma) ===== -->
-    <title id="meta-title">Samuel Peña | Freelance Full-Stack Web Developer</title>
+    <!-- ===== SEO META TAGS ===== -->
+    <title id="meta-title">
+        Samuel Peña | Freelance Full-Stack Web Developer
+    </title>
     <meta id="meta-desc" name="description"
         content="Portfolio of Samuel Peña, software developer with over 2 years of experience in web applications. Specialist in PHP, React, Next.js and PostgreSQL." />
     <meta name="keywords" content="web developer, full-stack, PHP, React, Next.js, PostgreSQL, freelance, Venezuela" />
@@ -55,13 +57,13 @@
                         "on-surface-variant": "#c0cab0",
                         "on-secondary-fixed": "#1c1b1b",
                         "surface-dim": "#121414",
-                        "secondary": "#c8c6c5",
+                        secondary: "#c8c6c5",
                         "on-tertiary": "#303030",
                         "inverse-on-surface": "#2f3131",
                         "secondary-fixed": "#e5e2e1",
                         "on-primary-fixed-variant": "#2a5000",
                         "on-secondary-fixed-variant": "#474746",
-                        "outline": "#8a947c",
+                        outline: "#8a947c",
                         "on-primary-container": "#3e7100",
                         "on-secondary": "#313030",
                         "secondary-container": "#474746",
@@ -70,12 +72,12 @@
                         "on-secondary-container": "#b7b5b4",
                         "tertiary-container": "#e4e2e1",
                         "surface-container-lowest": "#0c0f0f",
-                        "tertiary": "#ffffff",
+                        tertiary: "#ffffff",
                         "inverse-surface": "#e2e2e2",
                         "tertiary-fixed-dim": "#c8c6c5",
                         "secondary-fixed-dim": "#c8c6c5",
-                        "surface": "#121414",
-                        "error": "#ffb4ab",
+                        surface: "#121414",
+                        error: "#ffb4ab",
                         "tertiary-fixed": "#e4e2e1",
                         "primary-container": "#9ffa43",
                         "outline-variant": "#404a36",
@@ -85,20 +87,20 @@
                         "surface-variant": "#333535",
                         "surface-tint": "#84dd23",
                         "on-tertiary-container": "#656464",
-                        "primary": "#ffffff",
+                        primary: "#ffffff",
                         "surface-container-highest": "#333535",
                         "on-surface": "#e2e2e2",
                         "on-error": "#690005",
                         "inverse-primary": "#3a6a00",
                         "primary-fixed-dim": "#84dd23",
                         "surface-container-high": "#282a2b",
-                        "background": "#121414"
+                        background: "#121414",
                     },
                     borderRadius: {
                         DEFAULT: "0.25rem",
                         lg: "0.5rem",
                         xl: "0.75rem",
-                        full: "9999px"
+                        full: "9999px",
                     },
                     spacing: {
                         "stack-sm": "8px",
@@ -106,7 +108,7 @@
                         "stack-md": "16px",
                         "stack-lg": "32px",
                         "grid-margin": "40px",
-                        "gutter": "24px"
+                        gutter: "24px",
                     },
                     fontFamily: {
                         "headline-lg": ["Hanken Grotesk"],
@@ -115,20 +117,37 @@
                         "body-lg": ["Inter"],
                         "headline-lg-mobile": ["Hanken Grotesk"],
                         "label-caps": ["JetBrains Mono"],
-                        "body-md": ["Inter"]
+                        "body-md": ["Inter"],
                     },
                     fontSize: {
                         "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }],
-                        "display-lg": ["72px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "display-lg": [
+                            "72px",
+                            {
+                                lineHeight: "1.1",
+                                letterSpacing: "-0.02em",
+                                fontWeight: "700",
+                            },
+                        ],
                         "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
                         "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "600" }],
-                        "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "500" }],
-                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
-                    }
-                }
-            }
-        }
+                        "headline-lg-mobile": [
+                            "32px",
+                            { lineHeight: "1.2", fontWeight: "600" },
+                        ],
+                        "label-caps": [
+                            "12px",
+                            {
+                                lineHeight: "1.0",
+                                letterSpacing: "0.1em",
+                                fontWeight: "500",
+                            },
+                        ],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                    },
+                },
+            },
+        };
     </script>
 
     <!-- ===== ESTILOS PERSONALIZADOS ===== -->
@@ -137,7 +156,6 @@
 
 <body
     class="bg-background text-on-surface font-body-md min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
-
     <!-- ==================== HEADER / NAV ==================== -->
     <header role="banner" class="sticky top-0 z-50 border-b border-outline-variant bg-background/90 backdrop-blur-sm">
         <nav role="navigation" aria-label="Main navigation"
@@ -145,28 +163,48 @@
             <!-- Logo -->
             <div class="flex items-center gap-2">
                 <span class="material-symbols-outlined text-primary-fixed" data-icon="architecture" data-weight="fill"
-                    style="font-variation-settings:'FILL'1;">architecture</span>
+                    style="font-variation-settings: &quot;FILL&quot; 1">architecture</span>
                 <span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Samuel
                     Peña</span>
             </div>
 
             <!-- Enlaces (escritorio) -->
             <ul class="hidden md:flex gap-8" role="menubar">
-                <li role="none"><a href="#hero"
+                <li role="none">
+                    <a href="#hero"
                         class="nav-link font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary-fixed pb-1 scale-95 active:scale-90 transition-transform"
-                        data-target="hero" role="menuitem" data-i18n="nav-home">Inicio</a></li>
-                <li role="none"><a href="#about"
+                        data-target="hero" role="menuitem" data-i18n="nav-home">Inicio</a>
+                </li>
+                <li role="none">
+                    <a href="#about"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="about" role="menuitem" data-i18n="nav-about">Sobre Mí</a></li>
-                <li role="none"><a href="#skills"
+                        data-target="about" role="menuitem" data-i18n="nav-about">Sobre Mí</a>
+                </li>
+                <li role="none">
+                    <a href="#skills"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="skills" role="menuitem" data-i18n="nav-skills">Skills</a></li>
-                <li role="none"><a href="#experience"
+                        data-target="skills" role="menuitem" data-i18n="nav-skills">Skills</a>
+                </li>
+                <li role="none">
+                    <a href="#experience"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="experience" role="menuitem" data-i18n="nav-experience">Experiencia</a></li>
-                <li role="none"><a href="#projects"
+                        data-target="experience" role="menuitem" data-i18n="nav-experience">Experiencia</a>
+                </li>
+                <li role="none">
+                    <a href="#projects"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="projects" role="menuitem" data-i18n="nav-projects">Proyectos</a></li>
+                        data-target="projects" role="menuitem" data-i18n="nav-projects">Proyectos</a>
+                </li>
+                <li role="none">
+                    <a href="#certifications"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
+                        data-target="certifications" role="menuitem" data-i18n="nav-cert">Certificaciones</a>
+                </li>
+                <li role="none">
+                    <a href="#contact"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
+                        data-target="contact" role="menuitem" data-i18n="nav-contact">Contacto</a>
+                </li>
             </ul>
 
             <!-- Acciones: toggle idioma + contacto + hamburguesa -->
@@ -204,31 +242,47 @@
             class="md:hidden bg-surface-container-low border-b border-outline-variant px-6 py-4 hidden" role="menu"
             aria-label="Mobile menu">
             <ul class="flex flex-col gap-4">
-                <li><a href="#hero"
+                <li>
+                    <a href="#hero"
                         class="nav-link font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary-fixed pb-1"
-                        data-target="hero" data-i18n="nav-home">Inicio</a></li>
-                <li><a href="#about"
+                        data-target="hero" data-i18n="nav-home">Inicio</a>
+                </li>
+                <li>
+                    <a href="#about"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="about" data-i18n="nav-about">Sobre Mí</a></li>
-                <li><a href="#skills"
+                        data-target="about" data-i18n="nav-about">Sobre Mí</a>
+                </li>
+                <li>
+                    <a href="#skills"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="skills" data-i18n="nav-skills">Skills</a></li>
-                <li><a href="#experience"
+                        data-target="skills" data-i18n="nav-skills">Skills</a>
+                </li>
+                <li>
+                    <a href="#experience"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="experience" data-i18n="nav-experience">Experiencia</a></li>
-                <li><a href="#projects"
+                        data-target="experience" data-i18n="nav-experience">Experiencia</a>
+                </li>
+                <li>
+                    <a href="#projects"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="projects" data-i18n="nav-projects">Proyectos</a></li>
-                <li><a href="#footer"
+                        data-target="projects" data-i18n="nav-projects">Proyectos</a>
+                </li>
+                <li>
+                    <a href="#certifications"
                         class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="footer" data-i18n="nav-contact">Contacto</a></li>
+                        data-target="certifications" data-i18n="nav-cert">Certificaciones</a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
+                        data-target="contact" data-i18n="nav-contact">Contacto</a>
+                </li>
             </ul>
         </div>
     </header>
 
     <!-- ==================== MAIN ==================== -->
     <main id="main-content" role="main">
-
         <!-- ===== HERO ===== -->
         <section id="hero"
             class="relative min-h-[921px] flex flex-col justify-center px-grid-margin border-b border-[#262626] overflow-hidden">
@@ -236,16 +290,18 @@
                 <div class="col-span-12 lg:col-span-10 xl:col-span-9">
                     <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-12"
                         data-i18n="hero-title">
-                        Transforming ideas into <br />scalable and efficient web applications
+                        Transforming ideas into <br />scalable and efficient web
+                        applications
                     </h1>
                 </div>
                 <div class="col-span-12 lg:col-span-5 lg:col-start-8 xl:col-span-4 xl:col-start-9 mt-12 lg:mt-0">
                     <div
                         class="brutalist-border p-6 relative bg-surface-container-low/50 backdrop-blur-sm corner-bracket-tl corner-bracket-br">
                         <p class="font-body-lg text-body-lg text-on-surface mb-8" data-i18n="hero-desc">
-                            Hi, I'm Samuel Peña, a Full-Stack Jr. Developer and Freelance Software Developer from
-                            Venezuela. With over 2 years of experience, I specialize in building robust web solutions,
-                            from backend to dynamic user interfaces.
+                            Hi, I'm Samuel Peña, a Full-Stack Jr. Developer and Freelance
+                            Software Developer from Venezuela. With over 2 years of
+                            experience, I specialize in building robust web solutions, from
+                            backend to dynamic user interfaces.
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <a href="#projects"
@@ -278,34 +334,34 @@
                         data-i18n="about-badge">[ ABOUT ]</span>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary max-w-4xl"
                         data-i18n="about-title">
-                        Higher University Technician in Computer Science, passionate about clean code and agile
-                        solutions.
+                        Associate Degree in Computer Science, passionate about clean code
+                        and agile solutions.
                     </h2>
                 </div>
                 <div class="grid grid-cols-12 gap-gutter items-center">
                     <div class="col-span-12 md:col-span-4 order-2 md:order-1 flex flex-col justify-between h-full py-8">
                         <p class="font-body-md text-body-md text-on-surface-variant mb-12" data-i18n="about-text1">
-                            I graduated from the Jesús Obrero University Institute (IUJO) in May 2026. At 21, I'm
-                            passionate about solving complex problems through clean code and agile implementations. I'm
-                            bilingual, fluent in Spanish (Native) and English (C1), which allows me to collaborate
-                            effectively in international teams. Outside of commercial programming, I dedicate time to
-                            volunteering, contributing my technical knowledge to social impact causes.
+                            I graduated from the Jesús Obrero University Institute (IUJO) in
+                            May 2026 with an Associate Degree in Computer Science. At 21,
+                            I'm passionate about solving complex problems through clean code
+                            and agile implementations. I'm bilingual, fluent in Spanish
+                            (Native) and English (C1), which allows me to collaborate
+                            effectively in international teams. Outside of commercial
+                            programming, I dedicate time to volunteering, contributing my
+                            technical knowledge to social impact causes.
                         </p>
                         <div class="flex gap-4">
                             <a href="mailto:penagoyosamueldavid@gmail.com" aria-label="Email"
-                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm">
-                                <span class="material-symbols-outlined">alternate_email</span>
-                            </a>
+                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm"><span
+                                    class="material-symbols-outlined">alternate_email</span></a>
                             <a href="https://github.com/StonishVicer" target="_blank" rel="noopener noreferrer"
                                 aria-label="GitHub"
-                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm">
-                                <span class="material-symbols-outlined">code</span>
-                            </a>
+                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm"><span
+                                    class="material-symbols-outlined">code</span></a>
                             <a href="https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/" target="_blank"
                                 rel="noopener noreferrer" aria-label="LinkedIn"
-                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm">
-                                <span class="material-symbols-outlined">badge</span>
-                            </a>
+                                class="brutalist-border p-3 text-on-surface hover:text-primary-fixed hover:border-primary-fixed transition-colors flex items-center justify-center rounded-sm"><span
+                                    class="material-symbols-outlined">badge</span></a>
                         </div>
                     </div>
                     <div class="col-span-12 md:col-span-4 order-1 md:order-2 relative px-4">
@@ -317,9 +373,10 @@
                     </div>
                     <div class="col-span-12 md:col-span-4 order-3 flex flex-col justify-end h-full py-8">
                         <p class="font-body-md text-body-md text-on-surface-variant mb-8" data-i18n="about-text2">
-                            My technical training and practical experience have allowed me to lead projects from
-                            database design to responsive interface implementation. I believe in user-centered
-                            development and continuous improvement.
+                            My technical training and practical experience have allowed me
+                            to lead projects from database design to responsive interface
+                            implementation. I believe in user-centered development and
+                            continuous improvement.
                         </p>
                         <div>
                             <a href="#projects"
@@ -333,7 +390,7 @@
             </div>
         </section>
 
-        <!-- ===== SKILLS ===== (6 bloques) -->
+        <!-- ===== SKILLS ===== -->
         <section id="skills" class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
@@ -341,19 +398,24 @@
                         class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                         data-i18n="skills-badge">[ SKILLS ]</span>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
-                        data-i18n="skills-title">Skills &amp; Technologies</h2>
+                        data-i18n="skills-title">
+                        Skills & Technologies
+                    </h2>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Bloque 1: Lenguajes -->
                     <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary-fixed text-3xl">code</span>
-                            <h4 class="font-headline-md text-primary" data-i18n="skills-lang-title">Programming
-                                Languages</h4>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-lang-title">
+                                Programming Languages
+                            </h4>
                         </div>
                         <ul class="text-on-surface-variant space-y-1 text-sm">
                             <li data-i18n="skills-lang-1">PHP</li>
-                            <li data-i18n="skills-lang-2">JavaScript (ES6+) / TypeScript</li>
+                            <li data-i18n="skills-lang-2">
+                                JavaScript (ES6+) / TypeScript
+                            </li>
                             <li data-i18n="skills-lang-3">SQL, HTML5, CSS3</li>
                             <li data-i18n="skills-lang-4">Python (basic)</li>
                         </ul>
@@ -362,7 +424,8 @@
                     <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary-fixed text-3xl">web</span>
-                            <h4 class="font-headline-md text-primary" data-i18n="skills-front-title">Frontend Frameworks
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-front-title">
+                                Frontend Frameworks
                             </h4>
                         </div>
                         <ul class="text-on-surface-variant space-y-1 text-sm">
@@ -376,7 +439,8 @@
                     <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary-fixed text-3xl">dns</span>
-                            <h4 class="font-headline-md text-primary" data-i18n="skills-back-title">Backend &amp; APIs
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-back-title">
+                                Backend & APIs
                             </h4>
                         </div>
                         <ul class="text-on-surface-variant space-y-1 text-sm">
@@ -390,8 +454,9 @@
                     <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary-fixed text-3xl">database</span>
-                            <h4 class="font-headline-md text-primary" data-i18n="skills-db-title">Databases &amp;
-                                Storage</h4>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-db-title">
+                                Databases & Storage
+                            </h4>
                         </div>
                         <ul class="text-on-surface-variant space-y-1 text-sm">
                             <li data-i18n="skills-db-1">PostgreSQL / MySQL</li>
@@ -404,7 +469,8 @@
                     <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary-fixed text-3xl">build</span>
-                            <h4 class="font-headline-md text-primary" data-i18n="skills-tools-title">DevOps &amp; Tools
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-tools-title">
+                                DevOps & Tools
                             </h4>
                         </div>
                         <ul class="text-on-surface-variant space-y-1 text-sm">
@@ -414,18 +480,21 @@
                             <li data-i18n="skills-tools-4">Vercel / Netlify / AWS</li>
                         </ul>
                     </div>
-                    <!-- Bloque 6: Metodologías y competencias -->
+                    <!-- Bloque 6: Metodologías -->
                     <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="material-symbols-outlined text-primary-fixed text-3xl">psychology</span>
-                            <h4 class="font-headline-md text-primary" data-i18n="skills-meth-title">Methodologies &amp;
-                                Soft Skills</h4>
+                            <h4 class="font-headline-md text-primary" data-i18n="skills-meth-title">
+                                Methodologies & Soft Skills
+                            </h4>
                         </div>
                         <ul class="text-on-surface-variant space-y-1 text-sm">
                             <li data-i18n="skills-meth-1">Agile (Scrum / Kanban)</li>
                             <li data-i18n="skills-meth-2">AI-assisted development</li>
                             <li data-i18n="skills-meth-3">Technical SEO / Performance</li>
-                            <li data-i18n="skills-meth-4">CRM Automation (HubSpot, GoHighLevel)</li>
+                            <li data-i18n="skills-meth-4">
+                                CRM Automation (HubSpot, GoHighLevel)
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -442,10 +511,14 @@
                             class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                             data-i18n="exp-badge">[ EXPERIENCE ]</span>
                         <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
-                            data-i18n="exp-title">Professional Experience</h2>
+                            data-i18n="exp-title">
+                            Professional Experience
+                        </h2>
                     </div>
                     <p class="font-body-md text-on-surface-variant max-w-sm mt-4 md:mt-0 text-left md:text-right"
-                        data-i18n="exp-sub">Collaborations with digital agencies and international teams.</p>
+                        data-i18n="exp-sub">
+                        Collaborations with digital agencies and international teams.
+                    </p>
                 </div>
 
                 <div class="brutalist-border border-[#262626] p-4 relative dot-grid">
@@ -455,8 +528,9 @@
                             data-index="0">
                             <div class="flex items-center gap-8 mb-4 sm:mb-0 w-full sm:w-1/3">
                                 <span class="font-label-caps text-on-surface-variant">[ 01 ]</span>
-                                <h4 class="font-headline-md text-primary" data-i18n="exp-1-title">Full-Stack Developer
-                                    Intern</h4>
+                                <h4 class="font-headline-md text-primary" data-i18n="exp-1-title">
+                                    Full-Stack Developer Intern
+                                </h4>
                             </div>
                             <div class="w-full sm:w-1/6 mb-2 sm:mb-0 text-on-surface-variant">
                                 <span class="text-xs opacity-70 block mb-1" data-i18n="exp-company">Company</span>
@@ -473,12 +547,18 @@
                         </div>
                         <div class="exp-details px-6 py-4 border-b border-[#262626]">
                             <ul class="list-disc list-inside text-on-surface-variant space-y-2">
-                                <li data-i18n="exp-1-desc1">Developed a multi-tenant SaaS payroll module ("Dash") with
-                                    Next.js and Supabase, using RLS for data isolation.</li>
-                                <li data-i18n="exp-1-desc2">Built a corporate Wiki using Nextra JS and React,
-                                    streamlining the onboarding process and knowledge transfer.</li>
-                                <li data-i18n="exp-1-desc3">Conducted technical SEO audits and set up automations in
-                                    GoHighLevel CRM to improve sales response.</li>
+                                <li data-i18n="exp-1-desc1">
+                                    Developed a multi-tenant SaaS payroll module ("Dash") with
+                                    Next.js and Supabase, using RLS for data isolation.
+                                </li>
+                                <li data-i18n="exp-1-desc2">
+                                    Built a corporate Wiki using Nextra JS and React,
+                                    streamlining the onboarding process and knowledge transfer.
+                                </li>
+                                <li data-i18n="exp-1-desc3">
+                                    Conducted technical SEO audits and set up automations in
+                                    GoHighLevel CRM to improve sales response.
+                                </li>
                             </ul>
                         </div>
 
@@ -487,8 +567,9 @@
                             data-index="1">
                             <div class="flex items-center gap-8 mb-4 sm:mb-0 w-full sm:w-1/3">
                                 <span class="font-label-caps text-on-surface-variant">[ 02 ]</span>
-                                <h4 class="font-headline-md text-primary" data-i18n="exp-2-title">Web Developer &amp;
-                                    Community Manager</h4>
+                                <h4 class="font-headline-md text-primary" data-i18n="exp-2-title">
+                                    Web Developer & Community Manager
+                                </h4>
                             </div>
                             <div class="w-full sm:w-1/6 mb-2 sm:mb-0 text-on-surface-variant">
                                 <span class="text-xs opacity-70 block mb-1" data-i18n="exp-company">Company</span>
@@ -505,12 +586,18 @@
                         </div>
                         <div class="exp-details px-6 py-4">
                             <ul class="list-disc list-inside text-on-surface-variant space-y-2">
-                                <li data-i18n="exp-2-desc1">Architected a custom real estate platform with WordPress and
-                                    PHP, migrating legacy systems to an IDX-ready architecture.</li>
-                                <li data-i18n="exp-2-desc2">Integrated HubSpot CRM via REST APIs and custom templates,
-                                    resolving CSS conflicts for full mobile adaptability.</li>
-                                <li data-i18n="exp-2-desc3">Managed digital presence through asynchronous workflows to
-                                    drive lead generation.</li>
+                                <li data-i18n="exp-2-desc1">
+                                    Architected a custom real estate platform with WordPress and
+                                    PHP, migrating legacy systems to an IDX-ready architecture.
+                                </li>
+                                <li data-i18n="exp-2-desc2">
+                                    Integrated HubSpot CRM via REST APIs and custom templates,
+                                    resolving CSS conflicts for full mobile adaptability.
+                                </li>
+                                <li data-i18n="exp-2-desc3">
+                                    Managed digital presence through asynchronous workflows to
+                                    drive lead generation.
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -527,9 +614,13 @@
                         class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                         data-i18n="projects-badge">[ PROJECTS ]</span>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
-                        data-i18n="projects-title">Selected Projects</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="projects-sub">Web solutions
-                        that combine robust architecture, user experience, and measurable results.</p>
+                        data-i18n="projects-title">
+                        Selected Projects
+                    </h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="projects-sub">
+                        Web solutions that combine robust architecture, user experience,
+                        and measurable results.
+                    </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter w-full mb-16">
@@ -542,22 +633,26 @@
                                 src="https://picsum.photos/seed/audiovisual/600/400" loading="lazy" />
                             <div
                                 class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <a href="https://github.com/StonishVicer/audiovisualpro"
+                                <a href="#"
                                     class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold gap-2">
                                     <span data-i18n="projects-view">View on GitHub</span>
                                     <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                                 </a>
                             </div>
                         </div>
-                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-1-title">AudiovisualPro
-                            (Rental System)</h3>
-                        <p class="font-body-md text-on-surface-variant" data-i18n="project-1-role"><span
-                                class="font-semibold">Role:</span> Full-Stack Developer (Remote, Aug 2025 – Dec 2025)
+                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-1-title">
+                            AudiovisualPro (Rental System)
+                        </h3>
+                        <p class="font-body-md text-on-surface-variant" data-i18n="project-1-role">
+                            <span class="font-semibold">Role:</span> Full-Stack Developer
+                            (Remote, Aug 2025 – Dec 2025)
                         </p>
-                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-1-desc">Built a reactive
-                            rental platform and a secure backend with a PHP/PostgreSQL REST API for equipment
-                            scheduling. Implemented Role-Based Access Control (RBAC), reducing manual administrative
-                            workflows by 30%.</p>
+                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-1-desc">
+                            Built a reactive rental platform and a secure backend with a
+                            PHP/PostgreSQL REST API for equipment scheduling. Implemented
+                            Role-Based Access Control (RBAC), reducing manual administrative
+                            workflows by 30%.
+                        </p>
                     </div>
 
                     <!-- Proyecto 2 -->
@@ -576,15 +671,19 @@
                                 </a>
                             </div>
                         </div>
-                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-2-title">Heaven Graphics
+                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-2-title">
+                            Heaven Graphics
                         </h3>
-                        <p class="font-body-md text-on-surface-variant" data-i18n="project-2-role"><span
-                                class="font-semibold">Role:</span> Technical Lead (Pre-Internship) (Remote, Aug 2024 –
-                            Nov 2024)</p>
-                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-2-desc">Designed a CRUD
-                            inventory system with PHP and MySQL that reduced stock discrepancies from 15% to less than
-                            3%. Automated data entry by 50%, delivering a Minimum Viable Product (MVP) that optimized
-                            warehouse delivery times.</p>
+                        <p class="font-body-md text-on-surface-variant" data-i18n="project-2-role">
+                            <span class="font-semibold">Role:</span> Technical Lead
+                            (Pre-Internship) (Remote, Aug 2024 – Nov 2024)
+                        </p>
+                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-2-desc">
+                            Designed a CRUD inventory system with PHP and MySQL that reduced
+                            stock discrepancies from 15% to less than 3%. Automated data
+                            entry by 50%, delivering a Minimum Viable Product (MVP) that
+                            optimized warehouse delivery times.
+                        </p>
                     </div>
                 </div>
 
@@ -597,35 +696,231 @@
             </div>
         </section>
 
+        <!-- ===== CERTIFICATIONS ===== -->
+        <section id="certifications"
+            class="py-section-padding border-b border-[#262626] bg-surface-container-lowest overflow-hidden">
+            <div class="max-w-7xl mx-auto px-grid-margin mb-12">
+                <span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
+                    data-i18n="cert-badge">[ CREDENTIALS ]</span>
+                <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary"
+                    data-i18n="cert-title">
+                    Industry Certifications
+                </h2>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-grid-margin py-8 relative">
+                <!-- Contenedor principal con dos paneles (stack y detalle) -->
+                <div class="relative w-full overflow-hidden min-h-[500px]" id="cert-wrapper">
+                    <div class="flex transition-transform duration-700 ease-in-out" id="cert-slider"
+                        style="transform: translateX(0%)">
+                        <!-- Panel 1: Stack de tarjetas -->
+                        <div class="w-full flex-shrink-0 flex items-center justify-center min-h-[500px] relative"
+                            id="cert-stack-panel">
+                            <div class="relative w-full max-w-4xl h-[480px] flex items-center justify-center"
+                                id="cert-stack-container">
+                                <!-- Las tarjetas se renderizan con JS -->
+                            </div>
+                            <!-- Controles (flechas y puntos) visibles solo en stack -->
+                            <button id="cert-prev-stack"
+                                class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-surface-container-low brutalist-border p-2 md:p-3 rounded-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"
+                                aria-label="Previous certification">
+                                <span class="material-symbols-outlined">chevron_left</span>
+                            </button>
+                            <button id="cert-next-stack"
+                                class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-surface-container-low brutalist-border p-2 md:p-3 rounded-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"
+                                aria-label="Next certification">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                            <div id="cert-dots-stack"
+                                class="absolute bottom-0 left-1/2 -translate-x-1/2 flex gap-3 z-10"></div>
+                        </div>
+
+                        <!-- Panel 2: Detalle de certificación -->
+                        <div class="w-full flex-shrink-0 flex items-center justify-center min-h-[500px] p-4"
+                            id="cert-detail-panel">
+                            <div
+                                class="w-full max-w-6xl bg-surface-container-low brutalist-border rounded-sm p-6 relative corner-bracket-tl corner-bracket-br">
+                                <!-- Botón volver al stack -->
+                                <button id="cert-back-to-stack"
+                                    class="absolute top-4 left-4 text-on-surface-variant hover:text-primary-fixed transition-colors z-10"
+                                    aria-label="Back to certifications">
+                                    <span class="material-symbols-outlined">arrow_back</span>
+                                </button>
+                                <!-- Contenido del detalle (se llena con JS) -->
+                                <div id="cert-detail-content" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                                    <!-- Imagen del certificado -->
+                                    <div class="flex items-center justify-center">
+                                        <img id="cert-detail-image" src="" alt="Certificate"
+                                            class="w-full max-h-[400px] object-contain brutalist-border p-2 rounded-sm" />
+                                    </div>
+                                    <!-- Información -->
+                                    <div id="cert-detail-info" class="flex flex-col justify-center">
+                                        <!-- Se llena con JS -->
+                                    </div>
+                                </div>
+                                <!-- Controles de navegación en detalle -->
+                                <div class="flex justify-between items-center mt-6">
+                                    <button id="cert-prev-detail"
+                                        class="bg-surface-container-low brutalist-border p-2 rounded-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"
+                                        aria-label="Previous certification">
+                                        <span class="material-symbols-outlined">chevron_left</span>
+                                    </button>
+                                    <div id="cert-dots-detail" class="flex gap-3"></div>
+                                    <button id="cert-next-detail"
+                                        class="bg-surface-container-low brutalist-border p-2 rounded-sm hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"
+                                        aria-label="Next certification">
+                                        <span class="material-symbols-outlined">chevron_right</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== VOLUNTEERING ===== -->
         <section id="volunteering"
             class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-surface-container-lowest">
-            <div class="max-w-7xl mx-auto grid grid-cols-12 gap-gutter items-center">
-                <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-12">
                     <span
                         class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                         data-i18n="vol-badge">[ VOLUNTEERING ]</span>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
-                        data-i18n="vol-title">Social Impact</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="vol-sub">Bringing technology
-                        and training to communities in need.</p>
+                        data-i18n="vol-title">
+                        Social Impact
+                    </h2>
                 </div>
-                <div class="col-span-12 md:col-span-8">
-                    <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
-                        <div class="flex items-start gap-4 mb-4">
-                            <span
-                                class="material-symbols-outlined text-primary-fixed text-3xl">volunteer_activism</span>
-                            <h3 class="font-headline-md text-primary" data-i18n="vol-role">IT Support Volunteer</h3>
+
+                <div class="brutalist-border p-6 md:p-8 relative corner-bracket-tl corner-bracket-br">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <!-- Icono y título con organización destacada -->
+                        <div class="lg:w-1/4 flex-shrink-0">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span
+                                    class="material-symbols-outlined text-primary-fixed text-5xl">volunteer_activism</span>
+                                <div>
+                                    <h3 class="font-headline-md text-primary" data-i18n="vol-role">
+                                        IT Support Volunteer
+                                    </h3>
+                                    <!-- Badge de la organización con icono de cruz roja -->
+                                    <div
+                                        class="inline-flex items-center gap-2 bg-primary-fixed/10 brutalist-border border-primary-fixed/30 px-3 py-1.5 rounded-sm mt-1">
+                                        <span
+                                            class="material-symbols-outlined text-primary-fixed text-base">medical_services</span>
+                                        <span
+                                            class="font-label-caps text-xs text-primary-fixed font-bold tracking-wider"
+                                            data-i18n="vol-org-badge">VENEZUELAN RED CROSS</span>
+                                    </div>
+                                    <p class="text-on-surface-variant text-xs font-label-caps uppercase tracking-widest opacity-70 mt-2"
+                                        data-i18n="vol-location">
+                                        Barquisimeto, Venezuela · Aug 2025 – Dec 2025
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <p class="font-body-md text-on-surface-variant mb-2" data-i18n="vol-org"><span
-                                class="font-semibold">Venezuelan Red Cross</span> · Aug 2025 – Dec 2025 · Barquisimeto,
-                            Venezuela</p>
-                        <ul class="list-disc list-inside text-on-surface-variant space-y-2">
-                            <li data-i18n="vol-desc1">Restored over 12 obsolete workstations, extending critical
-                                hardware lifespan by approximately 2 years to support relief operations.</li>
-                            <li data-i18n="vol-desc2">Led 4 digital literacy workshops for over 20 staff members,
-                                improving operational efficiency and administrative workflows.</li>
-                        </ul>
+
+                        <!-- Contenido detallado -->
+                        <div class="lg:w-3/4">
+                            <p class="font-body-md text-on-surface-variant mb-6 leading-relaxed" data-i18n="vol-intro">
+                                Collaborated in an IT modernization and community service
+                                initiative to optimize the obsolete technology infrastructure
+                                of the Venezuelan Red Cross Barquisimeto chapter, directly
+                                safeguarding the digital workflows of critical health and
+                                laboratory facilities.
+                            </p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                <!-- Caja 1: Hardware Recovery -->
+                                <div
+                                    class="brutalist-border p-4 bg-surface-container-low/30 rounded-sm hover:bg-surface-container-low/50 transition-colors">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary-fixed text-2xl">hardware</span>
+                                        <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider"
+                                            data-i18n="vol-title-1">
+                                            Hardware Recovery & Diagnostics
+                                        </h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant" data-i18n="vol-desc1">
+                                        Conducted technical diagnostics and hardware recovery on
+                                        aging workstations, harvesting viable components from
+                                        decommissioned units to reassemble fully functional
+                                        hardware systems while mitigating implementation costs.
+                                    </p>
+                                </div>
+
+                                <!-- Caja 2: Network Infrastructure -->
+                                <div
+                                    class="brutalist-border p-4 bg-surface-container-low/30 rounded-sm hover:bg-surface-container-low/50 transition-colors">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary-fixed text-2xl">settings_ethernet</span>
+                                        <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider"
+                                            data-i18n="vol-title-2">
+                                            Network Infrastructure Renewal
+                                        </h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant" data-i18n="vol-desc2">
+                                        Inspected legacy networking architecture and
+                                        over-three-decade-old structured cabling to draft and
+                                        present a strategic infrastructure renewal plan designed
+                                        to minimize down-time risks across daily administrative
+                                        operations.
+                                    </p>
+                                </div>
+
+                                <!-- Caja 3: Documentation -->
+                                <div
+                                    class="brutalist-border p-4 bg-surface-container-low/30 rounded-sm hover:bg-surface-container-low/50 transition-colors">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary-fixed text-2xl">description</span>
+                                        <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider"
+                                            data-i18n="vol-title-3">
+                                            Technical Documentation & SOPs
+                                        </h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant" data-i18n="vol-desc3">
+                                        Authored comprehensive technical documentation and system
+                                        operation manuals from scratch to standardise software
+                                        maintenance and internal application procedures,
+                                        successfully reducing the organization's reliance on
+                                        external IT support.
+                                    </p>
+                                </div>
+
+                                <!-- Caja 4: Digital Literacy -->
+                                <div
+                                    class="brutalist-border p-4 bg-surface-container-low/30 rounded-sm hover:bg-surface-container-low/50 transition-colors">
+                                    <div class="flex items-center gap-2 mb-2">
+                                        <span
+                                            class="material-symbols-outlined text-primary-fixed text-2xl">school</span>
+                                        <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider"
+                                            data-i18n="vol-title-4">
+                                            Digital Literacy & AI Training
+                                        </h4>
+                                    </div>
+                                    <p class="text-sm text-on-surface-variant" data-i18n="vol-desc4">
+                                        Designed and delivered structured digital literacy
+                                        workshops, secure web navigation seminars, and workplace
+                                        prompt engineering training using generative AI tools,
+                                        effectively bridging technical generational gaps for
+                                        administrative staff and older workers.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Badge de impacto -->
+                            <div class="flex flex-wrap gap-4 items-center pt-4 border-t border-outline-variant">
+                                <span class="font-label-caps text-xs text-primary-fixed uppercase tracking-widest"
+                                    data-i18n="vol-impact-badge">✦ Impact achieved</span>
+                                <span class="text-xs text-on-surface-variant opacity-70" data-i18n="vol-impact-text">12+
+                                    workstations restored · 4 workshops delivered · 20+
+                                    staff trained</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -640,10 +935,13 @@
                         class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                         data-i18n="contact-badge">[ CONTACT ]</span>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
-                        data-i18n="contact-title">Let's talk about your next project</h2>
+                        data-i18n="contact-title">
+                        Let's talk about your next project
+                    </h2>
                     <p class="font-body-md text-body-md text-on-surface-variant mb-8" data-i18n="contact-desc">
-                        I'm always open to discussing new opportunities, collaborations, or just chatting about
-                        technology. Fill in the form and I'll get back to you as soon as possible.
+                        I'm always open to discussing new opportunities, collaborations,
+                        or just chatting about technology. Fill in the form and I'll get
+                        back to you as soon as possible.
                     </p>
                     <div class="flex flex-col gap-4 text-on-surface-variant">
                         <div class="flex items-center gap-3">
@@ -665,7 +963,7 @@
 
                 <!-- Formulario -->
                 <div class="col-span-12 md:col-span-7">
-                    <form id="contact-form" action="https://formspree.io/f/mgojklyw" method="POST"
+                    <form id="contact-form" action="https://formspree.io/f/TU_ID" method="POST"
                         class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br">
                         <div class="mb-4">
                             <label for="name"
@@ -712,7 +1010,7 @@
             </div>
         </section>
 
-        <!-- ===== CTA BANNER (original) ===== -->
+        <!-- ===== CTA BANNER ===== -->
         <section class="py-12 px-grid-margin bg-background relative z-10 border-b border-[#262626]">
             <div class="max-w-7xl mx-auto">
                 <div
@@ -721,18 +1019,21 @@
                         data-i18n="cta-title">
                         Ready to work together?
                     </h2>
-                    <p class="font-body-md max-w-2xl mx-auto mb-10 opacity-90" data-i18n="cta-desc">
-                        If you're looking for a proactive developer to boost your team or carry out your next software.
+                    <p class="font-body-md max-w-2xl mx-auto mb-6 opacity-90" data-i18n="cta-desc">
+                        If you're looking for a proactive developer to boost your team or
+                        carry out your next software project, let's talk.
                     </p>
                     <a href="#contact"
                         class="inline-flex items-center justify-center bg-background text-primary font-label-caps text-label-caps uppercase px-8 py-4 font-bold hover:bg-surface-container-low transition-colors rounded-sm gap-2">
                         <span data-i18n="cta-btn">Start a conversation</span>
                         <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                     </a>
+                    <p class="font-body-md opacity-80 mt-4" data-i18n="cta-sub">
+                        Fill out the form and I'll get back to you within 24 hours.
+                    </p>
                 </div>
             </div>
         </section>
-
     </main>
 
     <!-- ==================== FOOTER ==================== -->
@@ -742,12 +1043,13 @@
             <div>
                 <div class="flex items-center gap-2 mb-6">
                     <span class="material-symbols-outlined text-primary-fixed text-3xl" data-icon="architecture"
-                        data-weight="fill" style="font-variation-settings:'FILL'1;">architecture</span>
+                        data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1">architecture</span>
                     <span class="font-headline-md text-headline-md text-primary font-bold tracking-tighter">Samuel
                         Peña</span>
                 </div>
                 <p class="font-body-md text-body-md text-on-surface-variant max-w-sm" data-i18n="footer-desc">
-                    Full-Stack Jr. Developer specialized in scalable and efficient web applications.
+                    Full-Stack Jr. Developer specialized in scalable and efficient web
+                    applications.
                 </p>
                 <div class="mt-4 flex gap-4">
                     <a href="mailto:penagoyosamueldavid@gmail.com"
@@ -763,52 +1065,103 @@
             </div>
             <p class="font-label-caps text-label-caps text-on-surface-variant mt-12 md:mt-0 opacity-50"
                 data-i18n="footer-copy">
-                &copy; 2026 Samuel Peña. All rights reserved.
+                © 2026 Samuel Peña. All rights reserved.
             </p>
         </div>
 
         <div class="col-span-6 md:col-span-4 border-l border-[#262626] pl-8">
-            <h4 class="font-body-md font-bold text-on-surface mb-6" data-i18n="footer-nav">Navigation</h4>
+            <h4 class="font-body-md font-bold text-on-surface mb-6" data-i18n="footer-nav">
+                Navigation
+            </h4>
             <ul class="space-y-4">
-                <li><a href="#hero"
+                <li>
+                    <a href="#hero"
                         class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
-                        data-i18n="footer-nav-home">Home <span
-                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
-                <li><a href="#about"
+                        data-i18n="footer-nav-home">Home
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
+                <li>
+                    <a href="#about"
                         class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
-                        data-i18n="footer-nav-about">About <span
-                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
-                <li><a href="#skills"
+                        data-i18n="footer-nav-about">About
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
+                <li>
+                    <a href="#skills"
                         class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
-                        data-i18n="footer-nav-skills">Skills <span
-                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
-                <li><a href="#experience"
+                        data-i18n="footer-nav-skills">Skills
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
+                <li>
+                    <a href="#experience"
                         class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
-                        data-i18n="footer-nav-exp">Experience <span
-                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
-                <li><a href="#projects"
+                        data-i18n="footer-nav-exp">Experience
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
+                <li>
+                    <a href="#projects"
                         class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
-                        data-i18n="footer-nav-projects">Projects <span
-                            class="material-symbols-outlined text-sm">arrow_forward</span></a></li>
+                        data-i18n="footer-nav-projects">Projects
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
+                <li>
+                    <a href="#certifications"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-cert">Certifications
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="font-body-sm text-on-surface-variant hover:text-primary-fixed transition-colors opacity-80 hover:opacity-100 flex items-center justify-between group"
+                        data-i18n="footer-nav-contact">Contact
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </li>
             </ul>
         </div>
 
         <div class="col-span-6 md:col-span-4 border-l border-[#262626] pl-8">
-            <h4 class="font-body-md font-bold text-on-surface mb-6" data-i18n="footer-contact">Contact</h4>
+            <h4 class="font-body-md font-bold text-on-surface mb-6" data-i18n="footer-contact">
+                Contact
+            </h4>
             <ul class="space-y-4 text-on-surface-variant">
-                <li><span class="font-label-caps text-label-caps opacity-70"
+                <li>
+                    <span class="font-label-caps text-label-caps opacity-70"
                         data-i18n="footer-email-label">Email</span><br /><a href="mailto:penagoyosamueldavid@gmail.com"
-                        class="hover:text-primary-fixed transition-colors">penagoyosamueldavid@gmail.com</a></li>
-                <li><span class="font-label-caps text-label-caps opacity-70"
+                        class="hover:text-primary-fixed transition-colors">penagoyosamueldavid@gmail.com</a>
+                </li>
+                <li>
+                    <span class="font-label-caps text-label-caps opacity-70"
                         data-i18n="footer-phone-label">Phone</span><br /><a href="tel:+584245218811"
-                        class="hover:text-primary-fixed transition-colors">(+58) 424-5218811</a></li>
-                <li><span class="font-label-caps text-label-caps opacity-70"
+                        class="hover:text-primary-fixed transition-colors">(+58) 424-5218811</a>
+                </li>
+                <li>
+                    <span class="font-label-caps text-label-caps opacity-70"
                         data-i18n="footer-github-label">GitHub</span><br /><a href="https://github.com/StonishVicer"
                         target="_blank" rel="noopener noreferrer"
-                        class="hover:text-primary-fixed transition-colors">Stonish Vicer</a></li>
+                        class="hover:text-primary-fixed transition-colors">Stonish Vicer</a>
+                </li>
             </ul>
         </div>
     </footer>
+
+    <!-- ========================================== -->
+    <!-- MODAL PARA CERTIFICACIONES (fuera del main) -->
+    <!-- ========================================== -->
+    <div id="cert-modal"
+        class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4"
+        role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div
+            class="bg-background brutalist-border max-w-2xl w-full max-h-[90vh] overflow-y-auto p-8 rounded-sm relative corner-bracket-tl corner-bracket-br shadow-2xl transform scale-95 transition-transform duration-300 cert-modal-scroll">
+            <button id="modal-close"
+                class="absolute top-4 right-4 text-on-surface-variant hover:text-primary-fixed transition-colors"
+                aria-label="Close details">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div id="modal-content">
+                <!-- Se llena con JS -->
+            </div>
+        </div>
+    </div>
 
     <!-- ===== JS ===== -->
     <script src="js/main.js" defer></script>
