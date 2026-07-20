@@ -1,25 +1,5 @@
 // ==========================================
-// 1. MENÚ HAMBURGUESA
-// ==========================================
-const hamburgerBtn = document.getElementById("hamburger-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-
-hamburgerBtn?.addEventListener("click", () => {
-  const expanded =
-    hamburgerBtn.getAttribute("aria-expanded") === "true" ? false : true;
-  hamburgerBtn.setAttribute("aria-expanded", expanded);
-  mobileMenu.classList.toggle("hidden");
-});
-
-document.querySelectorAll("#mobile-menu a").forEach((link) => {
-  link.addEventListener("click", () => {
-    mobileMenu.classList.add("hidden");
-    hamburgerBtn.setAttribute("aria-expanded", "false");
-  });
-});
-
-// ==========================================
-// 2. FADE-IN AL SCROLL
+// 1. FADE-IN AL SCROLL
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll("section");
@@ -137,8 +117,9 @@ const translations = {
     "nav-contact": "Contact",
     "nav-contact-btn": "Contact",
     // Hero
+    "hero-tagline": "Full-Stack Developer",
     "hero-title":
-      "Transforming ideas into <br />scalable and efficient web applications",
+      "Transforming ideas into <span class=\"text-primary-fixed italic font-medium\">scalable</span> and <span class=\"text-primary-fixed italic font-medium\">efficient</span> web applications",
     "hero-desc":
       "Hi, I'm Samuel Peña, a Full-Stack Jr. Developer and Freelance Software Developer from Venezuela. With over 2 years of experience, I specialize in building robust web solutions, from backend to dynamic user interfaces.",
     "hero-btn-projects": "View Projects",
@@ -215,21 +196,44 @@ const translations = {
       "Managed digital presence through asynchronous workflows to drive lead generation.",
     // Projects
     "projects-badge": "[ PROJECTS ]",
-    "projects-title": "Selected Projects",
+    "projects-title": "TrainUP",
     "projects-sub":
-      "Web solutions that combine robust architecture, user experience, and measurable results.",
-    "projects-view": "View on GitHub",
-    "project-1-title": "AudiovisualPro (Rental System)",
-    "project-1-role":
-      '<span class="font-semibold">Role:</span> Full-Stack Developer (Remote, Aug 2025 – Dec 2025)',
-    "project-1-desc":
-      "Built a reactive rental platform and a secure backend with a PHP/PostgreSQL REST API for equipment scheduling. Implemented Role-Based Access Control (RBAC), reducing manual administrative workflows by 30%.",
-    "project-2-title": "Heaven Graphics",
-    "project-2-role":
-      '<span class="font-semibold">Role:</span> Technical Lead (Pre-Internship) (Remote, Aug 2024 – Nov 2024)',
-    "project-2-desc":
-      "Designed a CRUD inventory system with PHP and MySQL that reduced stock discrepancies from 15% to less than 3%. Automated data entry by 50%, delivering a Minimum Viable Product (MVP) that optimized warehouse delivery times.",
-    "projects-all": "View all projects",
+      "All-in-one gym management platform. Memberships, bookings, payments, body metrics, and more.",
+    "trainup-tagline": "Everything you need to manage your gym",
+    "trainup-tagline-sub":
+      "From memberships and bookings to body metrics and payments. TrainUP brings together all the tools your training center needs in one platform.",
+    "trainup-features-title": "Core Features",
+    "trainup-feat-1-title": "Membership Management",
+    "trainup-feat-1-desc": "Activate, renew, and manage subscription plans. Control each member's status and automate expiration reminders.",
+    "trainup-feat-2-title": "Bookings & Schedules",
+    "trainup-feat-2-desc": "Set flexible schedules by day and time. Real-time capacity control with training profile restrictions.",
+    "trainup-feat-3-title": "Integrated Payments",
+    "trainup-feat-3-desc": "Accept Pago Móvil, Zelle, Binance, and cash. Every transaction is recorded with receipt and admin approval.",
+    "trainup-feat-4-title": "Body Metrics",
+    "trainup-feat-4-desc": "Track weight, abdomen, arms, legs, chest, and more. Visualize progress with month-over-month charts and comparisons.",
+    "trainup-feat-5-title": "Admin Panel",
+    "trainup-feat-5-desc": "Full dashboard with users, payments, bookings, and metrics. Everything you need to run your gym from one place.",
+    "trainup-feat-6-title": "Client Portal",
+    "trainup-feat-6-desc": "Each athlete gets their own profile with payment history, bookings, metrics, and progress. Full self-service from their phone.",
+    "trainup-feat-7-title": "Notifications",
+    "trainup-feat-7-desc": "Automatic payment reminders, booking confirmations, and expiration alerts. Keep your members informed at all times.",
+    "trainup-feat-8-title": "Security & Compliance",
+    "trainup-feat-8-desc": "Data encryption, HTTPS connections, daily backups, and role-based access control. Your data protected at all times.",
+    "trainup-benefits-title": "Key Benefits",
+    "trainup-ben-1-title": "Time Savings",
+    "trainup-ben-1-desc": "Automate billing, bookings, and reminders. Recover hours you used to lose on manual administrative tasks.",
+    "trainup-ben-2-title": "Error Reduction",
+    "trainup-ben-2-desc": "Forget about spreadsheets and notebooks. Every payment, booking, and metric is recorded with no chance of loss.",
+    "trainup-ben-3-title": "Retention Improvement",
+    "trainup-ben-3-desc": "Athletes who see their progress stay more engaged. Evolution dashboards and visible metrics increase adherence.",
+    "trainup-ben-4-title": "Multi-platform Access",
+    "trainup-ben-4-desc": "Admins from the web panel, clients from their phone. Everyone gets the view they need, on the device they prefer.",
+    "trainup-testimonial-text": "\"TrainUP let us centralize everything: payments, bookings, and our athletes' progress. What used to take us a full day, we now solve in minutes.\"",
+    "trainup-testimonial-org": "Elite Training Center",
+    "trainup-testimonial-user": "TrainUP User",
+    "trainup-creds-title": "Try the Demo",
+    "trainup-mobile-note": "TrainUP is a mobile-first application, designed with the mobile experience in mind. It looks and works best on mobile devices or using responsive developer view in desktop browsers. The app is still in active development, so it will be updated and improved continuously.",
+    "trainup-visit": "Visit TrainUP",
     // Certifications - textos fijos
     "cert-badge": "[ CREDENTIALS ]",
     "cert-title": "Industry Certifications",
@@ -316,8 +320,9 @@ const translations = {
     "nav-contact": "Contacto",
     "nav-contact-btn": "Contactar",
     // Hero
+    "hero-tagline": "Desarrollador Full-Stack",
     "hero-title":
-      "Transformando ideas en <br />aplicaciones web escalables y eficientes",
+      "Transformando ideas en <span class=\"text-primary-fixed italic font-medium\">aplicaciones web escalables</span> y <span class=\"text-primary-fixed italic font-medium\">eficientes</span>",
     "hero-desc":
       "Hola, soy Samuel Peña, un Desarrollador Full-Stack Jr. y Freelance Software Developer de Venezuela. Con más de 2 años de experiencia, me especializo en construir soluciones web robustas, desde el backend hasta interfaces de usuario dinámicas.",
     "hero-btn-projects": "Ver Proyectos",
@@ -395,21 +400,44 @@ const translations = {
       "Gestioné la presencia digital mediante flujos de trabajo asíncronos para impulsar la generación de prospectos (leads).",
     // Projects
     "projects-badge": "[ PROYECTOS ]",
-    "projects-title": "Proyectos Seleccionados",
+    "projects-title": "TrainUP",
     "projects-sub":
-      "Soluciones web que combinan arquitectura robusta, experiencia de usuario y resultados medibles.",
-    "projects-view": "Ver en GitHub",
-    "project-1-title": "AudiovisualPro (Sistema de Rentas)",
-    "project-1-role":
-      '<span class="font-semibold">Rol:</span> Full-Stack Developer (Remoto, Ago 2025 – Dic 2025)',
-    "project-1-desc":
-      "Construí una plataforma de renta reactiva y un backend seguro con una API REST en PHP/PostgreSQL para la programación de equipos. Implementé un Control de Acceso Basado en Roles (RBAC), reduciendo los flujos de trabajo administrativos manuales en un 30%.",
-    "project-2-title": "Heaven Graphics",
-    "project-2-role":
-      '<span class="font-semibold">Rol:</span> Technical Lead (Pre-Internship) (Remoto, Ago 2024 – Nov 2024)',
-    "project-2-desc":
-      "Diseñé un sistema de inventario CRUD con PHP y MySQL que redujo las discrepancias de stock del 15% a menos del 3%. Automaticé la entrada de datos en un 50%, entregando un Producto Mínimo Viable (MVP) que optimizó los tiempos de entrega en el almacén.",
-    "projects-all": "Ver todos los proyectos",
+      "Plataforma integral de gestión de gimnasios. Membresías, reservas, pagos, métricas corporales y más.",
+    "trainup-tagline": "Todo lo que necesitas para gestionar tu gimnasio",
+    "trainup-tagline-sub":
+      "Desde membresías y reservas hasta métricas corporales y pagos. TrainUP reúne todas las herramientas que tu centro de entrenamiento necesita en una sola plataforma.",
+    "trainup-features-title": "Funciones Principales",
+    "trainup-feat-1-title": "Gestión de Membresías",
+    "trainup-feat-1-desc": "Activa, renueva y gestiona planes de suscripción. Controla el estado de cada miembro y automatiza los recordatorios de vencimiento.",
+    "trainup-feat-2-title": "Reservas y Horarios",
+    "trainup-feat-2-desc": "Configura horarios flexibles por día y hora. Control de capacidad en tiempo real con restricciones por perfil de entrenamiento.",
+    "trainup-feat-3-title": "Pagos Integrados",
+    "trainup-feat-3-desc": "Acepta Pago Móvil, Zelle, Binance y efectivo. Cada transacción queda registrada con comprobante y aprobación del administrador.",
+    "trainup-feat-4-title": "Métricas Corporales",
+    "trainup-feat-4-desc": "Registro de peso, abdomen, brazos, piernas, pecho y más. Visualiza la evolución con gráficos y comparativas mes a mes.",
+    "trainup-feat-5-title": "Panel de Administración",
+    "trainup-feat-5-desc": "Dashboard completo con usuarios, pagos, reservas y métricas. Todo lo que necesitas para operar tu gimnasio desde un solo lugar.",
+    "trainup-feat-6-title": "Portal del Cliente",
+    "trainup-feat-6-desc": "Cada atleta tiene su propio perfil con historial de pagos, reservas, métricas y progreso. Autogestión total desde su móvil.",
+    "trainup-feat-7-title": "Notificaciones",
+    "trainup-feat-7-desc": "Recordatorios automáticos de pago, confirmación de reservas y alertas de vencimiento. Mantén a tus miembros siempre informados.",
+    "trainup-feat-8-title": "Seguridad y Cumplimiento",
+    "trainup-feat-8-desc": "Encriptación de datos, conexiones HTTPS, backups diarios y control de acceso por roles. Tus datos protegidos en todo momento.",
+    "trainup-benefits-title": "Beneficios Clave",
+    "trainup-ben-1-title": "Ahorro de Tiempo",
+    "trainup-ben-1-desc": "Automatiza la facturación, las reservas y los recordatorios. Recupera horas que antes perdías en tareas administrativas manuales.",
+    "trainup-ben-2-title": "Reducción de Errores",
+    "trainup-ben-2-desc": "Olvídate de las hojas de cálculo y los cuadernos. Cada pago, reserva y métrica queda registrada sin posibilidad de pérdida.",
+    "trainup-ben-3-title": "Mejora de Retención",
+    "trainup-ben-3-desc": "Los atletas que ven su progreso se comprometen más. Los dashboards de evolución y las métricas visibles aumentan la adherencia.",
+    "trainup-ben-4-title": "Acceso Multiplataforma",
+    "trainup-ben-4-desc": "Administradores desde el panel web, clientes desde su móvil. Cada quien con la vista que necesita, en el dispositivo que prefiera.",
+    "trainup-testimonial-text": "\"TrainUP nos permitió centralizar todo: pagos, reservas y el progreso de nuestros atletas. Lo que antes nos tomaba un día entero, ahora lo resolvemos en minutos.\"",
+    "trainup-testimonial-org": "Centro de Entrenamiento Elite",
+    "trainup-testimonial-user": "Usuario TrainUP",
+    "trainup-creds-title": "Probar Demo",
+    "trainup-mobile-note": "TrainUP es una aplicación mobile-first, diseñada pensando en la experiencia móvil. Se visualiza y funciona mejor en dispositivos móviles o utilizando la vista de desarrollo responsiva en navegadores de escritorio. La app aún está en desarrollo activo, por lo que se irá actualizando y mejorando continuamente.",
+    "trainup-visit": "Visitar TrainUP",
     // Certifications - textos fijos
     "cert-badge": "[ CREDENCIALES ]",
     "cert-title": "Certificaciones Profesionales",
@@ -537,6 +565,47 @@ form?.addEventListener("submit", async (e) => {
 const certifications = [
   {
     id: 1,
+    icon: "smart_toy",
+    image: "assets/img/google_ai_certificate_samuel.jpg",
+    issueDate: "2026-07-08",
+    expirationDate: null,
+    credentialId: "0952ea0b-0b17-4c88-a865-affc542312de",
+    credentialUrl: "https://www.credly.com/earner/earned/badge/0952ea0b-0b17-4c88-a865-affc542312de",
+    translations: {
+      en: {
+        name: "Google AI Essentials",
+        organization: "Google Career Certificates",
+        skills: [
+          "Augment tasks with AI",
+          "Critical Thinking",
+          "Evaluate AI tools",
+          "Iterative thinking",
+          "Problem Solving",
+          "Prompt Engineering",
+          "Recognize AI harms",
+          "Use AI responsibly",
+          "Use generative AI technology",
+        ],
+      },
+      es: {
+        name: "Google AI Essentials",
+        organization: "Google Career Certificates",
+        skills: [
+          "Aumentar tareas con IA",
+          "Pensamiento Crítico",
+          "Evaluar herramientas de IA",
+          "Pensamiento Iterativo",
+          "Resolución de Problemas",
+          "Ingeniería de Prompts",
+          "Reconocer daños de la IA",
+          "Usar IA responsablemente",
+          "Usar tecnología de IA generativa",
+        ],
+      },
+    },
+  },
+  {
+    id: 2,
     icon: "auto_awesome",
     image: "assets/img/claude_certificate_samuel.jpg",
     issueDate: "2026-03-01",
@@ -564,41 +633,6 @@ const certifications = [
           "Desarrollo de IA Agéntica",
           "Ingeniería de Prompts",
           "Programación Asistida por IA",
-        ],
-      },
-    },
-  },
-  {
-    id: 2,
-    icon: "terminal",
-    image: "assets/img/bash_certificate_samuel.jpg",
-    issueDate: "2026-06-01",
-    expirationDate: null,
-    credentialId: "95icag7qfw",
-    credentialUrl: "https://campus.mouredev.pro/certificates/95icag7qfw",
-    translations: {
-      en: {
-        name: "Bash/Shell, terminal and command line from scratch",
-        organization: "MoureDev",
-        skills: [
-          "Bash",
-          "Shell Scripting",
-          "Logic Programming",
-          "Automation",
-          "System Administration",
-          "Command Line Tools",
-        ],
-      },
-      es: {
-        name: "Bash/Shell, terminal y línea de comandos desde cero",
-        organization: "MoureDev",
-        skills: [
-          "Bash",
-          "Programación de Shell",
-          "Programación Lógica",
-          "Automatización",
-          "Administración de Sistemas",
-          "Herramientas de Línea de Comandos",
         ],
       },
     },
@@ -636,11 +670,47 @@ const certifications = [
       },
     },
   },
+  {
+    id: 4,
+    icon: "terminal",
+    image: "assets/img/bash_certificate_samuel.jpg",
+    issueDate: "2026-06-01",
+    expirationDate: null,
+    credentialId: "95icag7qfw",
+    credentialUrl: "https://campus.mouredev.pro/certificates/95icag7qfw",
+    translations: {
+      en: {
+        name: "Bash/Shell, terminal and command line from scratch",
+        organization: "MoureDev",
+        skills: [
+          "Bash",
+          "Shell Scripting",
+          "Logic Programming",
+          "Automation",
+          "System Administration",
+          "Command Line Tools",
+        ],
+      },
+      es: {
+        name: "Bash/Shell, terminal y línea de comandos desde cero",
+        organization: "MoureDev",
+        skills: [
+          "Bash",
+          "Programación de Shell",
+          "Programación Lógica",
+          "Automatización",
+          "Administración de Sistemas",
+          "Herramientas de Línea de Comandos",
+        ],
+      },
+    },
+  },
 ];
 
 // --- Estado ---
 let currentCertIndex = 0;
 let isDetailView = false;
+let certSectionEntered = false;
 
 // --- Elementos DOM ---
 const stackContainer = document.getElementById("cert-stack-container");
@@ -678,7 +748,7 @@ function goToDetail(index) {
 function goToStack() {
   isDetailView = false;
   slider.style.transform = "translateX(0%)";
-  renderStack();
+  updateCertCards();
   updateDots(dotsStack, currentCertIndex);
 }
 
@@ -689,92 +759,83 @@ function changeCert(delta) {
     renderDetail(currentCertIndex);
     updateDots(dotsDetail, currentCertIndex);
   } else {
-    renderStack();
+    updateCertCards();
     updateDots(dotsStack, currentCertIndex);
   }
 }
 
 // --- Renderizar stack de tarjetas ---
-function renderStack() {
-  if (!stackContainer) return;
-  const cards = [];
-  certifications.forEach((cert, index) => {
-    const offset = index - currentCertIndex;
-    let translateX = 0,
-      translateY = 0,
-      rotate = 0,
-      scale = 1,
-      zIndex = 0,
-      opacity = 1;
+function buildCardHTML(cert, index) {
+  const name = getCertText(cert, "name");
+  const org = getCertText(cert, "organization");
 
-    if (offset === 0) {
-      translateX = 0;
-      translateY = 0;
-      rotate = 0;
-      scale = 1;
-      zIndex = 10;
-    } else if (offset > 0) {
-      const d = offset;
-      translateX = 80 * d + 30;
-      translateY = 25 * d;
-      rotate = 3 * d;
-      scale = 1 - 0.08 * d;
-      zIndex = 10 - d;
-      opacity = 1 - 0.2 * d;
-    } else {
-      const d = Math.abs(offset);
-      translateX = -80 * d - 30;
-      translateY = 25 * d;
-      rotate = -3 * d;
-      scale = 1 - 0.08 * d;
-      zIndex = 10 - d;
-      opacity = 1 - 0.2 * d;
-    }
-    if (Math.abs(offset) > 3) {
-      opacity = 0;
-      zIndex = -1;
-    }
-
-    const name = getCertText(cert, "name");
-    const org = getCertText(cert, "organization");
-
-    const cardHTML = `
-      <div class="cert-card brutalist-border rounded-sm shadow-2xl transition-all duration-500 ease-out cursor-pointer"
-           style="
-             transform: translate(-50%, -50%) translate(${translateX}px, ${translateY}px) rotate(${rotate}deg) scale(${scale});
-             z-index: ${zIndex};
-             opacity: ${opacity};
-             position: absolute;
-             left: 50%;
-             top: 50%;
-             background-image: url('${cert.image}');
-             background-size: cover;
-             background-position: center;
-             background-repeat: no-repeat;
-           "
-           data-index="${index}" role="button" tabindex="0" aria-label="${name} - ${org}">
-        <div class="card-overlay"></div>
-        <div class="card-content">
-          <span class="material-symbols-outlined cert-icon">${cert.icon}</span>
-          <p class="cert-org">${org}</p>
-          <h4 class="cert-name">${name}</h4>
-          <span class="cert-id">ID: ${cert.credentialId}</span>
-        </div>
+  return `
+    <div class="cert-card brutalist-border rounded-sm shadow-2xl transition-all duration-500 ease-out cursor-pointer"
+         data-index="${index}" role="button" tabindex="0" aria-label="${name} - ${org}"
+         style="
+           position: absolute;
+           left: 50%;
+           top: 50%;
+           background-image: url('${cert.image}');
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+         ">
+      <div class="card-overlay"></div>
+      <div class="card-content">
+        <span class="material-symbols-outlined cert-icon">${cert.icon}</span>
+        <p class="cert-org">${org}</p>
+        <h4 class="cert-name">${name}</h4>
+        <span class="cert-id">ID: ${cert.credentialId}</span>
       </div>
-    `;
-    cards.push(cardHTML);
-  });
+    </div>
+  `;
+}
 
-  stackContainer.innerHTML = cards.join("");
+function computeCardStyle(index) {
+  const offset = index - currentCertIndex;
+  let translateX = 0, translateY = 0, rotate = 0, scale = 1, zIndex = 0, opacity = 1;
 
-  document.querySelectorAll(".cert-card").forEach((card) => {
+  if (!certSectionEntered) {
+    translateX = 0;
+    translateY = 40;
+    rotate = 0;
+    scale = 0.85;
+    zIndex = index === 0 ? 10 : 1;
+    opacity = 0;
+  } else if (offset === 0) {
+    translateX = 0; translateY = 0; rotate = 0; scale = 1; zIndex = 10;
+  } else if (offset > 0) {
+    const d = offset;
+    translateX = 80 * d + 30;
+    translateY = 25 * d;
+    rotate = 3 * d;
+    scale = 1 - 0.08 * d;
+    zIndex = 10 - d;
+    opacity = 1 - 0.2 * d;
+  } else {
+    const d = Math.abs(offset);
+    translateX = -80 * d - 30;
+    translateY = 25 * d;
+    rotate = -3 * d;
+    scale = 1 - 0.08 * d;
+    zIndex = 10 - d;
+    opacity = 1 - 0.2 * d;
+  }
+  if (Math.abs(offset) > 3) { opacity = 0; zIndex = -1; }
+
+  return { transform: `translate(-50%, -50%) translate(${translateX}px, ${translateY}px) rotate(${rotate}deg) scale(${scale})`, zIndex, opacity };
+}
+
+function attachCardListeners() {
+  document.querySelectorAll("#cert-stack-container .cert-card").forEach((card) => {
     card.addEventListener("click", () => {
       const idx = parseInt(card.dataset.index, 10);
       if (idx === currentCertIndex) {
         goToDetail(idx);
       } else {
         currentCertIndex = idx;
-        renderStack();
+        updateCertCards();
         updateDots(dotsStack, currentCertIndex);
       }
     });
@@ -782,8 +843,33 @@ function renderStack() {
       if (e.key === "Enter") card.click();
     });
   });
+}
 
+function initCertCards() {
+  if (!stackContainer) return;
+  stackContainer.innerHTML = certifications.map((cert, i) => buildCardHTML(cert, i)).join("");
+  attachCardListeners();
+  updateCertCards();
+}
+
+function updateCertCards() {
+  if (!stackContainer) return;
+  const cards = stackContainer.querySelectorAll(".cert-card");
+  cards.forEach((card) => {
+    const index = parseInt(card.dataset.index, 10);
+    const style = computeCardStyle(index);
+    card.style.transform = style.transform;
+    card.style.zIndex = style.zIndex;
+    card.style.opacity = style.opacity;
+  });
   updateDots(dotsStack, currentCertIndex);
+}
+
+function rebuildCertCards() {
+  if (!stackContainer) return;
+  stackContainer.innerHTML = certifications.map((cert, i) => buildCardHTML(cert, i)).join("");
+  attachCardListeners();
+  updateCertCards();
 }
 
 // --- Renderizar detalle ---
@@ -851,12 +937,11 @@ function updateDots(container, activeIndex) {
 
 // --- Función para actualizar certificaciones al cambiar idioma ---
 function updateCertificationsLanguage() {
-  // Si el stack o detalle ya están renderizados, actualizar según la vista actual
   if (isDetailView) {
     renderDetail(currentCertIndex);
     updateDots(dotsDetail, currentCertIndex);
   } else {
-    renderStack();
+    rebuildCertCards();
     updateDots(dotsStack, currentCertIndex);
   }
 }
@@ -938,11 +1023,10 @@ setLanguage(initialLang);
 if (certifications.length > 0 && stackContainer) {
   // Si el slider no tiene contenido, lo renderizamos
   if (!stackContainer.querySelector(".cert-card")) {
-    renderStack();
-    // Si está en detalle (por defecto no), pero lo dejamos en stack
+    initCertCards();
     isDetailView = false;
     slider.style.transform = "translateX(0%)";
-    renderDetail(0); // pre-cargar detalle para que esté listo
+    renderDetail(0);
   }
 } else if (stackContainer) {
   stackContainer.innerHTML =
@@ -954,3 +1038,24 @@ document.getElementById("lang-toggle").addEventListener("click", () => {
   const nextLang = currentLang === "en" ? "es" : "en";
   setLanguage(nextLang);
 });
+
+// ==========================================
+// CERTIFICATE SECTION ENTRANCE ANIMATION
+// ==========================================
+const certSection = document.getElementById("certifications");
+const certEntranceObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !certSectionEntered) {
+        certSectionEntered = true;
+        updateCertCards();
+        certEntranceObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+if (certSection) {
+  certEntranceObserver.observe(certSection);
+}

@@ -33,295 +33,236 @@
     <!-- ===== FUENTES Y PRECONNECT ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
     <link
         href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
 
-    <!-- ===== TAILWIND ===== -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary-fixed": "#9ffa43",
-                        "on-primary": "#1c3700",
-                        "surface-container-low": "#1a1c1c",
-                        "on-tertiary-fixed-variant": "#474746",
-                        "on-primary-fixed": "#0e2000",
-                        "error-container": "#93000a",
-                        "on-surface-variant": "#c0cab0",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "surface-dim": "#121414",
-                        secondary: "#c8c6c5",
-                        "on-tertiary": "#303030",
-                        "inverse-on-surface": "#2f3131",
-                        "secondary-fixed": "#e5e2e1",
-                        "on-primary-fixed-variant": "#2a5000",
-                        "on-secondary-fixed-variant": "#474746",
-                        outline: "#8a947c",
-                        "on-primary-container": "#3e7100",
-                        "on-secondary": "#313030",
-                        "secondary-container": "#474746",
-                        "on-background": "#e2e2e2",
-                        "surface-container": "#1e2020",
-                        "on-secondary-container": "#b7b5b4",
-                        "tertiary-container": "#e4e2e1",
-                        "surface-container-lowest": "#0c0f0f",
-                        tertiary: "#ffffff",
-                        "inverse-surface": "#e2e2e2",
-                        "tertiary-fixed-dim": "#c8c6c5",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        surface: "#121414",
-                        error: "#ffb4ab",
-                        "tertiary-fixed": "#e4e2e1",
-                        "primary-container": "#9ffa43",
-                        "outline-variant": "#404a36",
-                        "on-error-container": "#ffdad6",
-                        "on-tertiary-fixed": "#1b1c1c",
-                        "surface-bright": "#37393a",
-                        "surface-variant": "#333535",
-                        "surface-tint": "#84dd23",
-                        "on-tertiary-container": "#656464",
-                        primary: "#ffffff",
-                        "surface-container-highest": "#333535",
-                        "on-surface": "#e2e2e2",
-                        "on-error": "#690005",
-                        "inverse-primary": "#3a6a00",
-                        "primary-fixed-dim": "#84dd23",
-                        "surface-container-high": "#282a2b",
-                        background: "#121414",
-                    },
-                    borderRadius: {
-                        DEFAULT: "0.25rem",
-                        lg: "0.5rem",
-                        xl: "0.75rem",
-                        full: "9999px",
-                    },
-                    spacing: {
-                        "stack-sm": "8px",
-                        "section-padding": "120px",
-                        "stack-md": "16px",
-                        "stack-lg": "32px",
-                        "grid-margin": "40px",
-                        gutter: "24px",
-                    },
-                    fontFamily: {
-                        "headline-lg": ["Hanken Grotesk"],
-                        "display-lg": ["Hanken Grotesk"],
-                        "headline-md": ["Hanken Grotesk"],
-                        "body-lg": ["Inter"],
-                        "headline-lg-mobile": ["Hanken Grotesk"],
-                        "label-caps": ["JetBrains Mono"],
-                        "body-md": ["Inter"],
-                    },
-                    fontSize: {
-                        "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "600" }],
-                        "display-lg": [
-                            "72px",
-                            {
-                                lineHeight: "1.1",
-                                letterSpacing: "-0.02em",
-                                fontWeight: "700",
-                            },
-                        ],
-                        "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "500" }],
-                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-                        "headline-lg-mobile": [
-                            "32px",
-                            { lineHeight: "1.2", fontWeight: "600" },
-                        ],
-                        "label-caps": [
-                            "12px",
-                            {
-                                lineHeight: "1.0",
-                                letterSpacing: "0.1em",
-                                fontWeight: "500",
-                            },
-                        ],
-                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-                    },
-                },
-            },
-        };
+    <!-- ===== THREE.JS IMPORT MAP ===== -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+            }
+        }
     </script>
+
+    <!-- ===== TAILWIND (static compiled CSS) ===== -->
+    <link rel="stylesheet" href="css/tailwind.css" />
 
     <!-- ===== ESTILOS PERSONALIZADOS ===== -->
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- ===== GSAP ===== -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 </head>
 
 <body
     class="bg-background text-on-surface font-body-md min-h-screen overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- ==================== HEADER / NAV ==================== -->
-    <header role="banner" class="sticky top-0 z-50 border-b border-outline-variant bg-background/90 backdrop-blur-sm">
+    <header role="banner" class="sticky top-0 z-50 border-b border-outline-variant bg-background/95">
         <nav role="navigation" aria-label="Main navigation"
             class="flex justify-between items-center w-full px-grid-margin py-stack-md max-w-full mx-auto">
             <!-- Logo -->
-            <div class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary-fixed" data-icon="architecture" data-weight="fill"
-                    style="font-variation-settings: &quot;FILL&quot; 1">architecture</span>
-                <span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">Samuel
-                    Peña</span>
-            </div>
-
-            <!-- Enlaces (escritorio) -->
-            <ul class="hidden md:flex gap-8" role="menubar">
-                <li role="none">
-                    <a href="#hero"
-                        class="nav-link font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary-fixed pb-1 scale-95 active:scale-90 transition-transform"
-                        data-target="hero" role="menuitem" data-i18n="nav-home">Inicio</a>
-                </li>
-                <li role="none">
-                    <a href="#about"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="about" role="menuitem" data-i18n="nav-about">Sobre Mí</a>
-                </li>
-                <li role="none">
-                    <a href="#skills"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="skills" role="menuitem" data-i18n="nav-skills">Skills</a>
-                </li>
-                <li role="none">
-                    <a href="#experience"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="experience" role="menuitem" data-i18n="nav-experience">Experiencia</a>
-                </li>
-                <li role="none">
-                    <a href="#projects"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="projects" role="menuitem" data-i18n="nav-projects">Proyectos</a>
-                </li>
-                <li role="none">
-                    <a href="#certifications"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="certifications" role="menuitem" data-i18n="nav-cert">Certificaciones</a>
-                </li>
-                <li role="none">
-                    <a href="#contact"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant font-medium hover:text-primary-fixed transition-colors duration-200 scale-95 active:scale-90"
-                        data-target="contact" role="menuitem" data-i18n="nav-contact">Contacto</a>
-                </li>
-            </ul>
-
-            <!-- Acciones: toggle idioma + contacto + hamburguesa -->
-            <div class="flex items-center gap-4">
-                <!-- Selector de idioma -->
+            <div class="flex items-center gap-3 md:gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary-fixed text-xl md:text-2xl" data-icon="architecture" data-weight="fill"
+                        style="font-variation-settings: &quot;FILL&quot; 1">architecture</span>
+                    <span class="font-headline-md text-lg md:text-headline-md font-bold text-primary tracking-tighter hidden sm:inline">Samuel
+                        Peña</span>
+                    <span class="font-headline-md text-lg md:text-headline-md font-bold text-primary tracking-tighter sm:hidden">SP</span>
+                </div>
                 <button id="lang-toggle"
                     class="flex items-center gap-1 text-xs font-bold text-primary-fixed border border-primary-fixed rounded-full px-3 py-1 hover:bg-primary-fixed/10 transition-colors"
                     aria-label="Toggle language">
                     <span id="lang-label">EN</span>
                     <span class="material-symbols-outlined text-sm">language</span>
                 </button>
+            </div>
 
+            <!-- Acciones -->
+            <div class="flex items-center gap-4">
                 <div class="hidden lg:flex items-center gap-2 px-4 py-2 brutalist-border rounded-sm">
                     <span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(159,250,67,0.8)]"></span>
                     <span class="font-label-caps text-label-caps text-primary-fixed"
                         data-i18n="hero-availability">Disponible</span>
                 </div>
-                <a href="#contact"
-                    class="bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm flex items-center gap-2"
-                    data-i18n="nav-contact-btn">
-                    Contactar
-                </a>
-                <!-- Botón hamburguesa -->
-                <button id="hamburger-btn" class="md:hidden flex flex-col gap-1 p-2"
-                    aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
-                    <span class="block w-6 h-0.5 bg-primary"></span>
-                    <span class="block w-6 h-0.5 bg-primary"></span>
-                    <span class="block w-6 h-0.5 bg-primary"></span>
+                <!-- StaggeredMenu Toggle -->
+                <button id="sm-toggle" class="sm-toggle" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="staggered-menu-panel" type="button">
+                    <span class="sm-toggle-textWrap" aria-hidden="true">
+                        <span class="sm-toggle-textInner">
+                            <span class="sm-toggle-line">Menu</span>
+                            <span class="sm-toggle-line">Close</span>
+                            <span class="sm-toggle-line">Menu</span>
+                            <span class="sm-toggle-line">Close</span>
+                            <span class="sm-toggle-line">Menu</span>
+                        </span>
+                    </span>
+                    <span class="sm-icon" aria-hidden="true">
+                        <span class="sm-icon-line"></span>
+                        <span class="sm-icon-line sm-icon-line-v"></span>
+                    </span>
                 </button>
             </div>
         </nav>
+    </header>
 
-        <!-- Menú móvil -->
-        <div id="mobile-menu"
-            class="md:hidden bg-surface-container-low border-b border-outline-variant px-6 py-4 hidden" role="menu"
-            aria-label="Mobile menu">
-            <ul class="flex flex-col gap-4">
-                <li>
-                    <a href="#hero"
-                        class="nav-link font-label-caps text-label-caps uppercase text-primary font-bold border-b-2 border-primary-fixed pb-1"
-                        data-target="hero" data-i18n="nav-home">Inicio</a>
+    <!-- StaggeredMenu pre-layers (outside header to avoid backdrop-filter containment) -->
+    <div class="sm-prelayers" aria-hidden="true">
+        <div class="sm-prelayer" style="background:#9ffa43"></div>
+        <div class="sm-prelayer" style="background:#84dd23"></div>
+    </div>
+
+    <!-- StaggeredMenu Panel -->
+    <aside id="staggered-menu-panel" class="staggered-menu-panel" aria-hidden="true">
+        <button id="sm-close" class="sm-close-btn" aria-label="Close menu" type="button">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <div class="sm-panel-inner">
+            <ul class="sm-panel-list" role="list" data-numbering>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#hero" data-i18n="nav-home">Inicio</a>
                 </li>
-                <li>
-                    <a href="#about"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="about" data-i18n="nav-about">Sobre Mí</a>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#about" data-i18n="nav-about">Sobre Mí</a>
                 </li>
-                <li>
-                    <a href="#skills"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="skills" data-i18n="nav-skills">Skills</a>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#skills" data-i18n="nav-skills">Skills</a>
                 </li>
-                <li>
-                    <a href="#experience"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="experience" data-i18n="nav-experience">Experiencia</a>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#experience" data-i18n="nav-experience">Experiencia</a>
                 </li>
-                <li>
-                    <a href="#projects"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="projects" data-i18n="nav-projects">Proyectos</a>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#projects" data-i18n="nav-projects">Proyectos</a>
                 </li>
-                <li>
-                    <a href="#certifications"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="certifications" data-i18n="nav-cert">Certificaciones</a>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#certifications" data-i18n="nav-cert">Certificaciones</a>
                 </li>
-                <li>
-                    <a href="#contact"
-                        class="nav-link font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-primary-fixed"
-                        data-target="contact" data-i18n="nav-contact">Contacto</a>
+                <li class="sm-panel-itemWrap">
+                    <a class="sm-panel-item" href="#contact" data-i18n="nav-contact">Contacto</a>
                 </li>
             </ul>
+            <div class="sm-socials">
+                <h3 class="sm-socials-title">Socials</h3>
+                <ul class="sm-socials-list" role="list">
+                    <li class="sm-socials-item">
+                        <a href="https://github.com/StonishVicer" target="_blank" rel="noopener noreferrer" class="sm-socials-link">GitHub</a>
+                    </li>
+                    <li class="sm-socials-item">
+                        <a href="https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/" target="_blank" rel="noopener noreferrer" class="sm-socials-link">LinkedIn</a>
+                    </li>
+                    <li class="sm-socials-item">
+                        <a href="mailto:penagoyosamueldavid@gmail.com" class="sm-socials-link">Email</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </aside>
 
     <!-- ==================== MAIN ==================== -->
     <main id="main-content" role="main">
         <!-- ===== HERO ===== -->
         <section id="hero"
-            class="relative min-h-[921px] flex flex-col justify-center px-grid-margin border-b border-[#262626] overflow-hidden">
-            <div class="relative z-10 max-w-7xl mx-auto w-full grid grid-cols-12 gap-gutter pt-20 pb-32">
-                <div class="col-span-12 lg:col-span-10 xl:col-span-9">
-                    <h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-12"
-                        data-i18n="hero-title">
-                        Transforming ideas into <br />scalable and efficient web
-                        applications
-                    </h1>
-                </div>
-                <div class="col-span-12 lg:col-span-5 lg:col-start-8 xl:col-span-4 xl:col-start-9 mt-12 lg:mt-0">
-                    <div
-                        class="brutalist-border p-6 relative bg-surface-container-low/50 backdrop-blur-sm corner-bracket-tl corner-bracket-br">
-                        <p class="font-body-lg text-body-lg text-on-surface mb-8" data-i18n="hero-desc">
-                            Hi, I'm Samuel Peña, a Full-Stack Jr. Developer and Freelance
-                            Software Developer from Venezuela. With over 2 years of
-                            experience, I specialize in building robust web solutions, from
-                            backend to dynamic user interfaces.
-                        </p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="#projects"
-                                class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-4 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm gap-2">
-                                <span data-i18n="hero-btn-projects">View Projects</span>
-                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            class="relative min-h-screen flex items-center px-grid-margin border-b border-[#262626] overflow-hidden">
+            <div id="floating-lines-bg" class="absolute inset-0 z-0 opacity-50"></div>
+
+            <div class="relative z-10 max-w-screen-2xl mx-auto w-full py-16 md:py-24">
+                <div class="grid grid-cols-12 gap-gutter items-start">
+                    <!-- Left: Headline + Socials -->
+                    <div class="col-span-12 lg:col-span-8 mb-10 lg:mb-0">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="h-px w-12 bg-primary-fixed"></span>
+                            <span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-[0.2em]"
+                                data-i18n="hero-tagline">
+                                Full-Stack Developer
+                            </span>
+                        </div>
+                        <h1 class="font-display-lg text-[28px] sm:text-display-lg-mobile md:text-display-lg text-on-surface max-w-4xl leading-tight mb-8 text-glow"
+                            data-i18n="hero-title">
+                            Transforming ideas into <span class="text-primary-fixed italic font-medium">scalable</span>
+                            and <span class="text-primary-fixed italic font-medium">efficient</span> web applications
+                        </h1>
+                        <div class="flex items-center gap-5 mt-10">
+                            <a href="https://github.com/StonishVicer" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub"
+                                class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-primary-fixed hover:text-primary-fixed transition-all">
+                                <span class="material-symbols-outlined">code</span>
                             </a>
-                            <a href="#contact"
-                                class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-6 py-4 hover:bg-surface-container-low transition-colors rounded-sm gap-2">
-                                <span data-i18n="hero-btn-contact">Contact</span>
-                                <span class="material-symbols-outlined text-[18px]">mail</span>
+                            <a href="https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn"
+                                class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-primary-fixed hover:text-primary-fixed transition-all">
+                                <span class="material-symbols-outlined">badge</span>
                             </a>
+                            <a href="mailto:penagoyosamueldavid@gmail.com" aria-label="Email"
+                                class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:border-primary-fixed hover:text-primary-fixed transition-all">
+                                <span class="material-symbols-outlined">alternate_email</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Bio Card -->
+                    <div class="col-span-12 lg:col-span-4 relative">
+                        <div class="glass-card p-6 md:p-8 corner-accent relative group">
+                            <div class="flex items-start gap-4 mb-6">
+                                <div
+                                    class="w-12 h-12 rounded-lg overflow-hidden border border-outline-variant/50 flex-shrink-0 bg-surface-container-highest">
+                                    <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                                        src="https://picsum.photos/seed/samuel/600/600"
+                                        alt="Samuel Peña, full-stack developer" loading="lazy" />
+                                </div>
+                                <div>
+                                    <h3 class="font-headline-md text-[20px] text-primary leading-tight">Samuel Peña</h3>
+                                    <p class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-wider">
+                                        Software Developer</p>
+                                </div>
+                            </div>
+                            <p class="text-sm text-on-surface-variant mb-8 leading-relaxed opacity-85"
+                                data-i18n="hero-desc">
+                                Hi, I'm Samuel Peña, a Full-Stack Jr. Developer and Freelance Software Developer from
+                                Venezuela. With over 2 years of experience, I specialize in building robust web solutions,
+                                from backend to dynamic user interfaces.
+                            </p>
+                            <div class="flex flex-col gap-3">
+                                <a href="#projects"
+                                    class="w-full py-3 bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps font-bold flex items-center justify-center gap-2 hover:bg-primary-fixed-dim transition-colors">
+                                    <span data-i18n="hero-btn-projects">View Projects</span>
+                                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                                </a>
+                                <a href="#contact"
+                                    class="w-full py-3 border border-outline-variant text-on-surface font-label-caps text-label-caps font-medium flex items-center justify-center gap-2 hover:bg-surface-container-high transition-colors">
+                                    <span data-i18n="hero-btn-contact">Contact</span>
+                                    <span class="material-symbols-outlined text-[18px]">mail</span>
+                                </a>
+                            </div>
+                            <div class="mt-8 flex flex-wrap gap-2">
+                                <span
+                                    class="px-2 py-1 text-[10px] font-label-caps bg-surface-container-highest border border-outline-variant/30 text-on-surface-variant uppercase">PHP</span>
+                                <span
+                                    class="px-2 py-1 text-[10px] font-label-caps bg-surface-container-highest border border-outline-variant/30 text-on-surface-variant uppercase">React</span>
+                                <span
+                                    class="px-2 py-1 text-[10px] font-label-caps bg-surface-container-highest border border-outline-variant/30 text-on-surface-variant uppercase">Next.js</span>
+                                <span
+                                    class="px-2 py-1 text-[10px] font-label-caps bg-surface-container-highest border border-outline-variant/30 text-on-surface-variant uppercase">Laravel</span>
+                                <span
+                                    class="px-2 py-1 text-[10px] font-label-caps bg-surface-container-highest border border-outline-variant/30 text-on-surface-variant uppercase">PostgreSQL</span>
+                                <span
+                                    class="px-2 py-1 text-[10px] font-label-caps bg-surface-container-highest border border-outline-variant/30 text-on-surface-variant uppercase">Node.js</span>
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 hidden lg:block opacity-20 pointer-events-none">
+                            <span class="material-symbols-outlined text-[120px] text-primary-fixed">grid_4x4</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="absolute bottom-12 left-grid-margin flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-primary-fixed shadow-[0_0_8px_rgba(159,250,67,0.8)]"></span>
-                <span class="font-label-caps text-label-caps text-on-surface-variant"
-                    data-i18n="hero-availability">Available for new projects</span>
+
+            <!-- Scroll Indicator (outside content wrapper, at bottom of hero) -->
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+                <span
+                    class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest">Discover</span>
+                <div class="scroll-indicator"></div>
             </div>
         </section>
 
@@ -367,11 +308,11 @@
                     <div class="col-span-12 md:col-span-4 order-1 md:order-2 relative px-4">
                         <div class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br">
                             <img class="w-full h-auto object-cover filter grayscale hover:grayscale-0 transition-all duration-500"
-                                src="https://picsum.photos/seed/samuel/600/600"
+                                src="assets/img/about-mockup.png"
                                 alt="Samuel Peña, full-stack developer, portrait" loading="lazy" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-span-12 md:col-span-4 order-3 flex flex-col justify-end h-full py-8">
+                        <div class="col-span-12 md:col-span-4 order-3 flex flex-col justify-end h-full py-8">
                         <p class="font-body-md text-body-md text-on-surface-variant mb-8" data-i18n="about-text2">
                             My technical training and practical experience have allowed me
                             to lead projects from database design to responsive interface
@@ -498,6 +439,7 @@
                         </ul>
                     </div>
                 </div>
+                <div id="skills-logoloop" class="mt-20 h-16"></div>
             </div>
         </section>
 
@@ -609,88 +551,237 @@
         <section id="projects"
             class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
             <div class="max-w-7xl mx-auto flex flex-col items-center">
-                <div class="text-center mb-20 max-w-3xl">
+                <div class="text-center mb-12 max-w-3xl">
                     <span
                         class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                         data-i18n="projects-badge">[ PROJECTS ]</span>
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
                         data-i18n="projects-title">
-                        Selected Projects
+                        TrainUP
                     </h2>
                     <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="projects-sub">
-                        Web solutions that combine robust architecture, user experience,
-                        and measurable results.
+                        Todo lo que necesitas para gestionar tu gimnasio. Desde membresías y reservas hasta métricas corporales y pagos.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter w-full mb-16">
-                    <!-- Proyecto 1 -->
-                    <div class="flex flex-col group cursor-pointer">
-                        <div
-                            class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br mb-6 overflow-hidden bg-surface-container-low">
-                            <img alt="AudiovisualPro project screenshot"
-                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transform"
-                                src="https://picsum.photos/seed/audiovisual/600/400" loading="lazy" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <a href="#"
-                                    class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold gap-2">
-                                    <span data-i18n="projects-view">View on GitHub</span>
-                                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </a>
-                            </div>
-                        </div>
-                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-1-title">
-                            AudiovisualPro (Rental System)
-                        </h3>
-                        <p class="font-body-md text-on-surface-variant" data-i18n="project-1-role">
-                            <span class="font-semibold">Role:</span> Full-Stack Developer
-                            (Remote, Aug 2025 – Dec 2025)
-                        </p>
-                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-1-desc">
-                            Built a reactive rental platform and a secure backend with a
-                            PHP/PostgreSQL REST API for equipment scheduling. Implemented
-                            Role-Based Access Control (RBAC), reducing manual administrative
-                            workflows by 30%.
-                        </p>
+                <!-- Mockup Image -->
+                <div class="w-full max-w-5xl mx-auto mb-16">
+                    <div class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br overflow-hidden bg-surface-container-low">
+                        <img alt="TrainUP landing page mockup"
+                            class="w-full h-auto object-cover"
+                            src="assets/img/trainup_landing_mockup.png" loading="lazy" />
                     </div>
+                </div>
 
-                    <!-- Proyecto 2 -->
-                    <div class="flex flex-col group cursor-pointer mt-12 md:mt-24">
-                        <div
-                            class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br mb-6 overflow-hidden bg-surface-container-low">
-                            <img alt="Heaven Graphics project screenshot"
-                                class="w-full h-auto object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300 group-hover:scale-105 transform"
-                                src="https://picsum.photos/seed/heaven/600/400" loading="lazy" />
-                            <div
-                                class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <a href="#"
-                                    class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold gap-2">
-                                    <span data-i18n="projects-view">View on GitHub</span>
-                                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                                </a>
+                <!-- Tagline -->
+                <div class="text-center mb-16 max-w-4xl">
+                    <p class="font-headline-md text-headline-lg-mobile md:text-headline-lg text-primary-fixed mb-4" data-i18n="trainup-tagline">
+                        Todo lo que necesitas para gestionar tu gimnasio
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="trainup-tagline-sub">
+                        Desde membresías y reservas hasta métricas corporales y pagos. TrainUP reúne todas las herramientas que tu centro de entrenamiento necesita en una sola plataforma.
+                    </p>
+                </div>
+
+                <!-- Feature Cards Grid -->
+                <div class="w-full mb-16">
+                    <h3 class="font-headline-md text-primary text-center mb-10" data-i18n="trainup-features-title">
+                        Funciones Principales
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <!-- Feature 1: Membresías -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">card_membership</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-1-title">Gestión de Membresías</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-1-desc">
+                                Activa, renueva y gestiona planes de suscripción. Controla el estado de cada miembro y automatiza los recordatorios de vencimiento.
+                            </p>
+                        </div>
+                        <!-- Feature 2: Reservas -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">calendar_month</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-2-title">Reservas y Horarios</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-2-desc">
+                                Configura horarios flexibles por día y hora. Control de capacidad en tiempo real con restricciones por perfil de entrenamiento.
+                            </p>
+                        </div>
+                        <!-- Feature 3: Pagos -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">payments</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-3-title">Pagos Integrados</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-3-desc">
+                                Acepta Pago Móvil, Zelle, Binance y efectivo. Cada transacción queda registrada con comprobante y aprobación del administrador.
+                            </p>
+                        </div>
+                        <!-- Feature 4: Métricas -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">monitoring</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-4-title">Métricas Corporales</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-4-desc">
+                                Registro de peso, abdomen, brazos, piernas, pecho y más. Visualiza la evolución con gráficos y comparativas mes a mes.
+                            </p>
+                        </div>
+                        <!-- Feature 5: Admin -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">admin_panel_settings</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-5-title">Panel de Administración</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-5-desc">
+                                Dashboard completo con usuarios, pagos, reservas y métricas. Todo lo que necesitas para operar tu gimnasio desde un solo lugar.
+                            </p>
+                        </div>
+                        <!-- Feature 6: Portal Cliente -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">person</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-6-title">Portal del Cliente</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-6-desc">
+                                Cada atleta tiene su propio perfil con historial de pagos, reservas, métricas y progreso. Autogestión total desde su móvil.
+                            </p>
+                        </div>
+                        <!-- Feature 7: Notificaciones -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">notifications</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-7-title">Notificaciones</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-7-desc">
+                                Recordatorios automáticos de pago, confirmación de reservas y alertas de vencimiento. Mantén a tus miembros siempre informados.
+                            </p>
+                        </div>
+                        <!-- Feature 8: Seguridad -->
+                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-3xl">security</span>
+                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-8-title">Seguridad y Cumplimiento</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-8-desc">
+                                Encriptación de datos, conexiones HTTPS, backups diarios y control de acceso por roles. Tus datos protegidos en todo momento.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Benefits Section -->
+                <div class="w-full mb-16">
+                    <h3 class="font-headline-md text-primary text-center mb-10" data-i18n="trainup-benefits-title">
+                        Beneficios Clave
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="brutalist-border p-6 bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-2xl">schedule</span>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-1-title">Ahorro de Tiempo</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-1-desc">Automatiza la facturación, las reservas y los recordatorios. Recupera horas que antes perdías en tareas administrativas manuales.</p>
+                        </div>
+                        <div class="brutalist-border p-6 bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-2xl">error_outline</span>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-2-title">Reducción de Errores</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-2-desc">Olvídate de las hojas de cálculo y los cuadernos. Cada pago, reserva y métrica queda registrada sin posibilidad de pérdida.</p>
+                        </div>
+                        <div class="brutalist-border p-6 bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-2xl">groups</span>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-3-title">Mejora de Retención</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-3-desc">Los atletas que ven su progreso se comprometen más. Los dashboards de evolución y las métricas visibles aumentan la adherencia.</p>
+                        </div>
+                        <div class="brutalist-border p-6 bg-surface-container-low/30">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="material-symbols-outlined text-primary-fixed text-2xl">devices</span>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-4-title">Acceso Multiplataforma</h4>
+                            </div>
+                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-4-desc">Administradores desde el panel web, clientes desde su móvil. Cada quien con la vista que necesita, en el dispositivo que prefiera.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial -->
+                <div class="w-full max-w-4xl mx-auto mb-16">
+                    <div class="brutalist-border p-6 md:p-8 bg-surface-container-low/30 relative corner-bracket-tl corner-bracket-br">
+                        <div class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary-fixed text-4xl flex-shrink-0">format_quote</span>
+                            <div>
+                                <p class="font-body-md text-body-md text-on-surface-variant italic mb-4" data-i18n="trainup-testimonial-text">
+                                    "TrainUP nos permitió centralizar todo: pagos, reservas y el progreso de nuestros atletas. Lo que antes nos tomaba un día entero, ahora lo resolvemos en minutos."
+                                </p>
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary-fixed">fitness_center</span>
+                                    <div>
+                                        <p class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-testimonial-org">Centro de Entrenamiento Elite</p>
+                                        <p class="text-xs text-on-surface-variant opacity-70" data-i18n="trainup-testimonial-user">Usuario TrainUP</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <h3 class="font-headline-md text-primary-fixed mb-3" data-i18n="project-2-title">
-                            Heaven Graphics
+                    </div>
+                </div>
+
+                <!-- Credentials & Demo Info -->
+                <div class="w-full max-w-4xl mx-auto mb-12">
+                    <div class="brutalist-border p-8 md:p-10 bg-surface-container-low/30 relative corner-bracket-tl corner-bracket-br">
+                        <h3 class="font-headline-md text-primary-fixed mb-8 text-center" data-i18n="trainup-creds-title">
+                            Probar Demo
                         </h3>
-                        <p class="font-body-md text-on-surface-variant" data-i18n="project-2-role">
-                            <span class="font-semibold">Role:</span> Technical Lead
-                            (Pre-Internship) (Remote, Aug 2024 – Nov 2024)
-                        </p>
-                        <p class="font-body-md text-on-surface-variant mt-2" data-i18n="project-2-desc">
-                            Designed a CRUD inventory system with PHP and MySQL that reduced
-                            stock discrepancies from 15% to less than 3%. Automated data
-                            entry by 50%, delivering a Minimum Viable Product (MVP) that
-                            optimized warehouse delivery times.
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider mb-4">Administrador</h4>
+                                <div class="space-y-3 text-xs text-on-surface-variant">
+                                    <p><span class="text-primary-fixed">Email:</span> demo@trainup.lat</p>
+                                    <p><span class="text-primary-fixed">Password:</span> Demo123!</p>
+                                </div>
+                            </div>
+                            <div>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider mb-4">Cliente Demo</h4>
+                                <div class="space-y-3 text-xs text-on-surface-variant">
+                                    <p><span class="text-primary-fixed">Email:</span> demo.user1@trainup.lat</p>
+                                    <p><span class="text-primary-fixed">Password:</span> password</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <a href="https://trainup.lat/" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm gap-2">
+                                <span>Landing Page</span>
+                                <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                            </a>
+                            <a href="https://demo.trainup.lat/demo" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-6 py-3 font-bold hover:bg-surface-container-low transition-colors rounded-sm gap-2">
+                                <span>Demo</span>
+                                <span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile-first note -->
+                <div class="w-full max-w-2xl mx-auto mb-8">
+                    <div class="flex items-start gap-3 p-4 brutalist-border border-primary-fixed/30 bg-primary-fixed/5 rounded-sm">
+                        <span class="material-symbols-outlined text-primary-fixed text-2xl flex-shrink-0">info</span>
+                        <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-mobile-note">
+                            TrainUP es una aplicación mobile-first, diseñada pensando en la experiencia móvil. Se visualiza y funciona mejor en dispositivos móviles o utilizando la vista de desarrollo responsiva en navegadores de escritorio. La app aún está en desarrollo activo, por lo que se irá actualizando y mejorando continuamente.
                         </p>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <a href="#"
-                        class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-8 py-4 hover:bg-surface-container-low transition-colors rounded-sm">
-                        <span data-i18n="projects-all">View all projects</span>
+                    <a href="https://trainup.lat/" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-8 py-4 hover:bg-surface-container-low transition-colors rounded-sm gap-2">
+                        <span data-i18n="trainup-visit">Visitar TrainUP</span>
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
                     </a>
                 </div>
             </div>
@@ -736,10 +827,10 @@
                         </div>
 
                         <!-- Panel 2: Detalle de certificación -->
-                        <div class="w-full flex-shrink-0 flex items-center justify-center min-h-[500px] p-4"
+                        <div class="w-full flex-shrink-0 flex items-start md:items-center justify-center min-h-[300px] md:min-h-[500px] p-0 md:p-4"
                             id="cert-detail-panel">
                             <div
-                                class="w-full max-w-6xl bg-surface-container-low brutalist-border rounded-sm p-6 relative corner-bracket-tl corner-bracket-br">
+                                class="w-full max-w-6xl bg-surface-container-low brutalist-border rounded-sm p-3 md:p-6 relative corner-bracket-tl corner-bracket-br">
                                 <!-- Botón volver al stack -->
                                 <button id="cert-back-to-stack"
                                     class="absolute top-4 left-4 text-on-surface-variant hover:text-primary-fixed transition-colors z-10"
@@ -747,7 +838,7 @@
                                     <span class="material-symbols-outlined">arrow_back</span>
                                 </button>
                                 <!-- Contenido del detalle (se llena con JS) -->
-                                <div id="cert-detail-content" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+                                <div id="cert-detail-content" class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 mt-4 md:mt-8">
                                     <!-- Imagen del certificado -->
                                     <div class="flex items-center justify-center">
                                         <img id="cert-detail-image" src="" alt="Certificate"
@@ -756,8 +847,8 @@
                                     <!-- Información -->
                                     <div id="cert-detail-info" class="flex flex-col justify-center">
                                         <!-- Se llena con JS -->
-                                    </div>
-                                </div>
+                </div>
+            </div>
                                 <!-- Controles de navegación en detalle -->
                                 <div class="flex justify-between items-center mt-6">
                                     <button id="cert-prev-detail"
@@ -1014,7 +1105,7 @@
         <section class="py-12 px-grid-margin bg-background relative z-10 border-b border-[#262626]">
             <div class="max-w-7xl mx-auto">
                 <div
-                    class="bg-primary-fixed text-on-primary-fixed py-24 px-8 text-center relative dot-grid brutalist-border border-[#262626]">
+                    class="bg-primary-fixed text-on-primary-fixed py-12 md:py-24 px-6 md:px-8 text-center relative dot-grid brutalist-border border-[#262626]">
                     <h2 class="font-headline-lg text-headline-lg-mobile md:text-display-lg mb-6 max-w-3xl mx-auto tracking-tight"
                         data-i18n="cta-title">
                         Ready to work together?
@@ -1035,6 +1126,14 @@
             </div>
         </section>
     </main>
+
+    <!-- ===== Bottom Badge ===== -->
+    <div class="pointer-events-none fixed bottom-0 left-0 p-grid-margin z-20 opacity-60 hidden sm:block">
+        <div class="flex items-center gap-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>
+            <span class="font-label-caps text-[10px] text-on-surface tracking-widest uppercase">Latam Based — Worldwide Ready</span>
+        </div>
+    </div>
 
     <!-- ==================== FOOTER ==================== -->
     <footer id="footer" role="contentinfo"
@@ -1164,6 +1263,82 @@
     </div>
 
     <!-- ===== JS ===== -->
+    <script type="module">
+        import initFloatingLines from './js/floating-lines.js';
+        import initLogoLoop from './js/logo-loop.js';
+        import initStaggeredMenu from './js/staggered-menu.js';
+
+        try { initStaggeredMenu({
+            position: 'right',
+            colors: ['#9ffa43', '#84dd23'],
+            menuButtonColor: '#e2e2e2',
+            openMenuButtonColor: '#9ffa43',
+            changeMenuColorOnOpen: true,
+            closeOnClickAway: true
+        }); } catch (e) { console.error('StaggeredMenu:', e); }
+
+        try {
+            const bg = document.getElementById('floating-lines-bg');
+            if (bg) {
+                initFloatingLines(bg, {
+                    linesGradient: ['#9ffa43', '#84dd23', '#4a90d9', '#e945f5'],
+                    enabledWaves: ['top', 'middle', 'bottom'],
+                    lineCount: [8, 12, 16],
+                    lineDistance: [7, 5, 4],
+                    bendRadius: 5.0,
+                    bendStrength: -0.5,
+                    interactive: true,
+                    parallax: false,
+                    animationSpeed: 0.7,
+                    mixBlendMode: 'normal'
+                });
+            }
+        } catch (e) { console.error('FloatingLines:', e); }
+
+        const logos = [
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/php.svg', alt: 'PHP', href: 'https://www.php.net' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/javascript.svg', alt: 'JavaScript', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/typescript.svg', alt: 'TypeScript', href: 'https://www.typescriptlang.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/postgresql.svg', alt: 'SQL / PostgreSQL', href: 'https://www.postgresql.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/html5.svg', alt: 'HTML5', href: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/css3.svg', alt: 'CSS3', href: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/python.svg', alt: 'Python', href: 'https://www.python.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/react.svg', alt: 'React', href: 'https://react.dev' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/nextdotjs.svg', alt: 'Next.js', href: 'https://nextjs.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/vuedotjs.svg', alt: 'Vue.js', href: 'https://vuejs.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/tailwindcss.svg', alt: 'Tailwind CSS', href: 'https://tailwindcss.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/bootstrap.svg', alt: 'Bootstrap', href: 'https://getbootstrap.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/laravel.svg', alt: 'Laravel', href: 'https://laravel.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/nodedotjs.svg', alt: 'Node.js', href: 'https://nodejs.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/express.svg', alt: 'Express', href: 'https://expressjs.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/postman.svg', alt: 'REST APIs', href: 'https://www.postman.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/graphql.svg', alt: 'GraphQL', href: 'https://graphql.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/wordpress.svg', alt: 'WordPress', href: 'https://wordpress.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/postgresql.svg', alt: 'PostgreSQL', href: 'https://www.postgresql.org' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/mysql.svg', alt: 'MySQL', href: 'https://www.mysql.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/supabase.svg', alt: 'Supabase', href: 'https://supabase.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/firebase.svg', alt: 'Firebase', href: 'https://firebase.google.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/mongodb.svg', alt: 'MongoDB', href: 'https://www.mongodb.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/git.svg', alt: 'Git', href: 'https://git-scm.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/docker.svg', alt: 'Docker', href: 'https://www.docker.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/githubactions.svg', alt: 'GitHub Actions', href: 'https://github.com/features/actions' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/vercel.svg', alt: 'Vercel', href: 'https://vercel.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/amazonwebservices.svg', alt: 'AWS', href: 'https://aws.amazon.com' },
+            { src: 'https://cdn.jsdelivr.net/npm/simple-icons@14/icons/hubspot.svg', alt: 'HubSpot', href: 'https://www.hubspot.com' },
+        ];
+
+        try {
+            const logoContainer = document.getElementById('skills-logoloop');
+            if (logoContainer) {
+                initLogoLoop(logoContainer, {
+                    logos, speed: 80, direction: 'left',
+                    logoHeight: 44, gap: 36, hoverSpeed: 0,
+                    scaleOnHover: true, fadeOut: true, fadeOutColor: '#121414',
+                    ariaLabel: 'Technologies and tools'
+                });
+            }
+        } catch (e) { console.error('LogoLoop:', e); }
+    </script>
     <script src="js/main.js" defer></script>
 </body>
 
