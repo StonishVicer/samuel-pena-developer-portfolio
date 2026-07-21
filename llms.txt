@@ -1,0 +1,40 @@
+# Samuel Peña - Portfolio
+
+## About
+Full-Stack Jr. Developer from Venezuela. Associate Degree in Computer Science (IUJO, May 2026). Bilingual (Spanish native, English C1). Passionate about clean code, scalable web applications, and agile solutions.
+
+## Tech Stack
+- **Languages:** PHP, JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3, Python (basic)
+- **Frontend:** React, Next.js, Vue.js (basic), Tailwind CSS, Bootstrap
+- **Backend:** Laravel, Node.js (Express), RESTful APIs, GraphQL, WordPress
+- **Databases:** PostgreSQL, MySQL, Supabase, Firebase, MongoDB (basic)
+- **DevOps:** Git, Docker (basic), CI/CD (GitHub Actions), Vercel, Netlify, AWS
+- **Methodologies:** Agile (Scrum/Kanban), AI-assisted development, Technical SEO, CRM Automation (HubSpot, GoHighLevel)
+
+## Projects
+
+### TrainUP
+Gym management platform. Mobile-first SaaS for memberships, bookings, payments, body metrics, admin dashboard, client portal, notifications, and reporting.
+- Landing: https://trainup.lat/
+- Demo: https://demo.trainup.lat/demo
+- Admin demo: demo@trainup.lat / Demo123!
+- Client demo: demo.user1@trainup.lat / password
+
+## Experience
+1. **Full-Stack Developer Intern** at Keycode Agencia Digital (Feb 2026 – May 2026, Remote, Mexico)
+2. **Web Developer & Community Manager** at The Loctor Family of REALTORS® (Oct 2024 – May 2026, Remote, US)
+
+## Certifications
+- Google AI Essentials (Google Career Certificates)
+- Claude Code in Action (Anthropic)
+- EF SET English Certificate C2 Proficient (82/100)
+- Bash/Shell, terminal and command line from scratch (MoureDev)
+
+## Volunteering
+IT Support Volunteer at Venezuelan Red Cross - Barquisimeto chapter (Aug 2025 – Dec 2025). Hardware recovery, network infrastructure renewal, technical documentation, and digital literacy training.
+
+## Contact
+- Email: penagoyosamueldavid@gmail.com
+- Phone: (+58) 424-5218811
+- GitHub: https://github.com/StonishVicer
+- LinkedIn: https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/
