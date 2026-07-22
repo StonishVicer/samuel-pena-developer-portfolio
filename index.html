@@ -559,11 +559,11 @@
         <section id="projects"
             class="py-section-padding px-grid-margin border-b border-[#262626] relative bg-background">
             <div class="max-w-7xl mx-auto flex flex-col items-center">
-                <div class="text-center mb-12 max-w-3xl">
+                <div class="text-center mb-14 max-w-3xl">
                     <span
                         class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest mb-4 block"
                         data-i18n="projects-badge">[ PROJECTS ]</span>
-                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6"
+                    <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4"
                         data-i18n="projects-title">
                         TrainUP
                     </h2>
@@ -572,167 +572,37 @@
                     </p>
                 </div>
 
-                <!-- Mockup Image -->
-                <div class="w-full max-w-5xl mx-auto mb-16">
-                    <div class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br overflow-hidden bg-surface-container-low">
-                        <img alt="TrainUP landing page mockup"
-                            class="w-full h-auto object-cover"
-                            src="assets/img/trainup_landing_mockup.png" loading="lazy" />
-                    </div>
-                </div>
-
-                <!-- Tagline -->
-                <div class="text-center mb-16 max-w-4xl">
-                    <p class="font-headline-md text-headline-lg-mobile md:text-headline-lg text-primary-fixed mb-4" data-i18n="trainup-tagline">
-                        Todo lo que necesitas para gestionar tu gimnasio
-                    </p>
-                    <p class="font-body-md text-body-md text-on-surface-variant" data-i18n="trainup-tagline-sub">
-                        Desde membresías y reservas hasta métricas corporales y pagos. TrainUP reúne todas las herramientas que tu centro de entrenamiento necesita en una sola plataforma.
-                    </p>
-                </div>
-
-                <!-- Feature Cards Grid -->
-                <div class="w-full mb-16">
-                    <h3 class="font-headline-md text-primary text-center mb-10" data-i18n="trainup-features-title">
-                        Funciones Principales
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <!-- Feature 1: Membresías -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">card_membership</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-1-title">Gestión de Membresías</h4>
+                <!-- Mockup + Features side by side -->
+                <div class="w-full max-w-6xl mx-auto mb-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-gutter items-start">
+                        <!-- Mockup Image (3/5) -->
+                        <div class="lg:col-span-3">
+                            <div class="brutalist-border p-1 relative corner-bracket-tl corner-bracket-br overflow-hidden bg-surface-container-low">
+                                <img alt="TrainUP landing page mockup"
+                                    class="w-full h-auto object-cover"
+                                    src="assets/img/trainup_landing_mockup.png" loading="lazy" />
                             </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-1-desc">
-                                Activa, renueva y gestiona planes de suscripción. Controla el estado de cada miembro y automatiza los recordatorios de vencimiento.
+                        </div>
+                        <!-- Features Summary (2/5) -->
+                        <div class="lg:col-span-2">
+                            <p class="font-headline-md text-lg text-primary-fixed mb-4" data-i18n="trainup-tagline">
+                                Todo lo que necesitas para gestionar tu gimnasio
                             </p>
-                        </div>
-                        <!-- Feature 2: Reservas -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">calendar_month</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-2-title">Reservas y Horarios</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-2-desc">
-                                Configura horarios flexibles por día y hora. Control de capacidad en tiempo real con restricciones por perfil de entrenamiento.
+                            <p class="text-sm text-on-surface-variant mb-6" data-i18n="trainup-tagline-sub">
+                                TrainUP reúne todas las herramientas que tu centro de entrenamiento necesita en una sola plataforma.
                             </p>
-                        </div>
-                        <!-- Feature 3: Pagos -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">payments</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-3-title">Pagos Integrados</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-5">
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">card_membership</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-1">Membresías</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">calendar_month</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-2">Reservas</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">payments</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-3">Pagos</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">monitoring</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-4">Métricas</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">admin_panel_settings</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-5">Admin Panel</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">person</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-6">Portal Cliente</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">notifications</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-7">Notificaciones</span></div>
+                                <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed text-2xl">security</span><span class="text-sm text-on-surface-variant" data-i18n="trainup-feat-short-8">Seguridad</span></div>
                             </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-3-desc">
-                                Acepta Pago Móvil, Zelle, Binance y efectivo. Cada transacción queda registrada con comprobante y aprobación del administrador.
-                            </p>
-                        </div>
-                        <!-- Feature 4: Métricas -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">monitoring</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-4-title">Métricas Corporales</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-4-desc">
-                                Registro de peso, abdomen, brazos, piernas, pecho y más. Visualiza la evolución con gráficos y comparativas mes a mes.
-                            </p>
-                        </div>
-                        <!-- Feature 5: Admin -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">admin_panel_settings</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-5-title">Panel de Administración</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-5-desc">
-                                Dashboard completo con usuarios, pagos, reservas y métricas. Todo lo que necesitas para operar tu gimnasio desde un solo lugar.
-                            </p>
-                        </div>
-                        <!-- Feature 6: Portal Cliente -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">person</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-6-title">Portal del Cliente</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-6-desc">
-                                Cada atleta tiene su propio perfil con historial de pagos, reservas, métricas y progreso. Autogestión total desde su móvil.
-                            </p>
-                        </div>
-                        <!-- Feature 7: Notificaciones -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">notifications</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-7-title">Notificaciones</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-7-desc">
-                                Recordatorios automáticos de pago, confirmación de reservas y alertas de vencimiento. Mantén a tus miembros siempre informados.
-                            </p>
-                        </div>
-                        <!-- Feature 8: Seguridad -->
-                        <div class="brutalist-border p-6 relative corner-bracket-tl corner-bracket-br bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-3xl">security</span>
-                                <h4 class="font-headline-md text-sm text-primary" data-i18n="trainup-feat-8-title">Seguridad y Cumplimiento</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-feat-8-desc">
-                                Encriptación de datos, conexiones HTTPS, backups diarios y control de acceso por roles. Tus datos protegidos en todo momento.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Benefits Section -->
-                <div class="w-full mb-16">
-                    <h3 class="font-headline-md text-primary text-center mb-10" data-i18n="trainup-benefits-title">
-                        Beneficios Clave
-                    </h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="brutalist-border p-6 bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-2xl">schedule</span>
-                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-1-title">Ahorro de Tiempo</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-1-desc">Automatiza la facturación, las reservas y los recordatorios. Recupera horas que antes perdías en tareas administrativas manuales.</p>
-                        </div>
-                        <div class="brutalist-border p-6 bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-2xl">error_outline</span>
-                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-2-title">Reducción de Errores</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-2-desc">Olvídate de las hojas de cálculo y los cuadernos. Cada pago, reserva y métrica queda registrada sin posibilidad de pérdida.</p>
-                        </div>
-                        <div class="brutalist-border p-6 bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-2xl">groups</span>
-                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-3-title">Mejora de Retención</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-3-desc">Los atletas que ven su progreso se comprometen más. Los dashboards de evolución y las métricas visibles aumentan la adherencia.</p>
-                        </div>
-                        <div class="brutalist-border p-6 bg-surface-container-low/30">
-                            <div class="flex items-center gap-3 mb-3">
-                                <span class="material-symbols-outlined text-primary-fixed text-2xl">devices</span>
-                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-ben-4-title">Acceso Multiplataforma</h4>
-                            </div>
-                            <p class="text-xs text-on-surface-variant" data-i18n="trainup-ben-4-desc">Administradores desde el panel web, clientes desde su móvil. Cada quien con la vista que necesita, en el dispositivo que prefiera.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial -->
-                <div class="w-full max-w-4xl mx-auto mb-16">
-                    <div class="brutalist-border p-6 md:p-8 bg-surface-container-low/30 relative corner-bracket-tl corner-bracket-br">
-                        <div class="flex items-start gap-4">
-                            <span class="material-symbols-outlined text-primary-fixed text-4xl flex-shrink-0">format_quote</span>
-                            <div>
-                                <p class="font-body-md text-body-md text-on-surface-variant italic mb-4" data-i18n="trainup-testimonial-text">
-                                    "TrainUP nos permitió centralizar todo: pagos, reservas y el progreso de nuestros atletas. Lo que antes nos tomaba un día entero, ahora lo resolvemos en minutos."
-                                </p>
-                                <div class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary-fixed">fitness_center</span>
-                                    <div>
-                                        <p class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider" data-i18n="trainup-testimonial-org">Centro de Entrenamiento Elite</p>
-                                        <p class="text-xs text-on-surface-variant opacity-70" data-i18n="trainup-testimonial-user">Usuario TrainUP</p>
-                                    </div>
-                                </div>
+                            <div class="mt-6 text-sm text-on-surface-variant">
+                                <span class="text-primary-fixed">✦</span> <span data-i18n="trainup-benefits-short">Mobile-first · Multiplataforma · Pagos integrados</span>
                             </div>
                         </div>
                     </div>
@@ -740,35 +610,35 @@
 
                 <!-- Credentials & Demo Info -->
                 <div class="w-full max-w-4xl mx-auto mb-12">
-                    <div class="brutalist-border p-8 md:p-10 bg-surface-container-low/30 relative corner-bracket-tl corner-bracket-br">
-                        <h3 class="font-headline-md text-primary-fixed mb-8 text-center" data-i18n="trainup-creds-title">
+                    <div class="brutalist-border p-6 md:p-8 bg-surface-container-low/30 relative corner-bracket-tl corner-bracket-br">
+                        <h3 class="font-headline-md text-primary-fixed mb-6 text-center" data-i18n="trainup-creds-title">
                             Probar Demo
                         </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
-                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider mb-4">Administrador</h4>
-                                <div class="space-y-3 text-xs text-on-surface-variant">
-                                    <p><span class="text-primary-fixed">Email:</span> demo@trainup.lat</p>
-                                    <p><span class="text-primary-fixed">Password:</span> Demo123!</p>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider mb-3" data-i18n="trainup-creds-admin-label">Administrador</h4>
+                                <div class="space-y-2 text-sm text-on-surface-variant">
+                                    <p><span class="text-primary-fixed" data-i18n="trainup-creds-email">Email:</span> demo@trainup.lat</p>
+                                    <p><span class="text-primary-fixed" data-i18n="trainup-creds-password">Contraseña:</span> Demo123!</p>
                                 </div>
                             </div>
                             <div>
-                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider mb-4">Cliente Demo</h4>
-                                <div class="space-y-3 text-xs text-on-surface-variant">
-                                    <p><span class="text-primary-fixed">Email:</span> demo.user1@trainup.lat</p>
-                                    <p><span class="text-primary-fixed">Password:</span> password</p>
+                                <h4 class="font-label-caps text-xs text-primary-fixed uppercase tracking-wider mb-3" data-i18n="trainup-creds-client-label">Cliente Demo</h4>
+                                <div class="space-y-2 text-sm text-on-surface-variant">
+                                    <p><span class="text-primary-fixed" data-i18n="trainup-creds-email">Email:</span> demo.user1@trainup.lat</p>
+                                    <p><span class="text-primary-fixed" data-i18n="trainup-creds-password">Contraseña:</span> password</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex flex-wrap gap-3 justify-center">
+                        <div class="flex flex-wrap gap-4 justify-center">
                             <a href="https://trainup.lat/" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps uppercase px-6 py-3 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm gap-2">
-                                <span>Landing Page</span>
+                                class="inline-flex items-center justify-center bg-primary-fixed text-on-primary-fixed font-label-caps text-sm uppercase px-6 py-3 font-bold hover:bg-primary-fixed-dim transition-colors rounded-sm gap-2">
+                                <span data-i18n="trainup-link-landing">Visita TrainUP</span>
                                 <span class="material-symbols-outlined text-[18px]">open_in_new</span>
                             </a>
                             <a href="https://demo.trainup.lat/demo" target="_blank" rel="noopener noreferrer"
-                                class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-6 py-3 font-bold hover:bg-surface-container-low transition-colors rounded-sm gap-2">
-                                <span>Demo</span>
+                                class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-sm uppercase px-6 py-3 font-bold hover:bg-surface-container-low transition-colors rounded-sm gap-2">
+                                <span data-i18n="trainup-link-demo">Demo</span>
                                 <span class="material-symbols-outlined text-[18px]">open_in_new</span>
                             </a>
                         </div>
@@ -776,21 +646,13 @@
                 </div>
 
                 <!-- Mobile-first note -->
-                <div class="w-full max-w-2xl mx-auto mb-8">
+                <div class="w-full max-w-2xl mx-auto">
                     <div class="flex items-start gap-3 p-4 brutalist-border border-primary-fixed/30 bg-primary-fixed/5 rounded-sm">
-                        <span class="material-symbols-outlined text-primary-fixed text-2xl flex-shrink-0">info</span>
+                        <span class="material-symbols-outlined text-primary-fixed text-xl flex-shrink-0">info</span>
                         <p class="text-xs text-on-surface-variant leading-relaxed" data-i18n="trainup-mobile-note">
-                            TrainUP es una aplicación mobile-first, diseñada pensando en la experiencia móvil. Se visualiza y funciona mejor en dispositivos móviles o utilizando la vista de desarrollo responsiva en navegadores de escritorio. La app aún está en desarrollo activo, por lo que se irá actualizando y mejorando continuamente.
+                            TrainUP es una aplicación mobile-first. Se visualiza mejor en dispositivos móviles o usando la vista de desarrollo responsiva en navegadores. La app está en desarrollo activo.
                         </p>
                     </div>
-                </div>
-
-                <div class="text-center">
-                    <a href="https://trainup.lat/" target="_blank" rel="noopener noreferrer"
-                        class="inline-flex items-center justify-center brutalist-border text-on-surface font-label-caps text-label-caps uppercase px-8 py-4 hover:bg-surface-container-low transition-colors rounded-sm gap-2">
-                        <span data-i18n="trainup-visit">Visitar TrainUP</span>
-                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-                    </a>
                 </div>
             </div>
         </section>
