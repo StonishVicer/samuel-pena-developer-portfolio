@@ -1,40 +1,135 @@
-# Samuel Peña - Portfolio
+# Samuel Peña | Full-Stack Web Developer Portfolio
 
-## About
-Full-Stack Jr. Developer from Venezuela. Associate Degree in Computer Science (IUJO, May 2026). Bilingual (Spanish native, English C1). Passionate about clean code, scalable web applications, and agile solutions.
+> Full-Stack Jr. Developer specialized in scalable web applications. Associate Degree in Computer Science. Bilingual (EN/ES). AI-assisted development advocate.
 
-## Tech Stack
-- **Languages:** PHP, JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3, Python (basic)
-- **Frontend:** React, Next.js, Vue.js (basic), Tailwind CSS, Bootstrap
-- **Backend:** Laravel, Node.js (Express), RESTful APIs, GraphQL, WordPress
-- **Databases:** PostgreSQL, MySQL, Supabase, Firebase, MongoDB (basic)
-- **DevOps:** Git, Docker (basic), CI/CD (GitHub Actions), Vercel, Netlify, AWS
-- **Methodologies:** Agile (Scrum/Kanban), AI-assisted development, Technical SEO, CRM Automation (HubSpot, GoHighLevel)
+---
 
-## Projects
+## 👤 About Me
 
-### TrainUP
-Gym management platform. Mobile-first SaaS for memberships, bookings, payments, body metrics, admin dashboard, client portal, notifications, and reporting.
-- Landing: https://trainup.lat/
-- Demo: https://demo.trainup.lat/demo
-- Admin demo: demo@trainup.lat / Demo123!
-- Client demo: demo.user1@trainup.lat / password
+I am Samuel Peña, a Full-Stack Jr. Developer and Freelance Software Developer from Barquisimeto, Venezuela. I graduated from the Jesús Obrero University Institute (IUJO) in May 2026 with an Associate Degree in Computer Science at age 21.
 
-## Experience
-1. **Full-Stack Developer Intern** at Keycode Agencia Digital (Feb 2026 – May 2026, Remote, Mexico)
-2. **Web Developer & Community Manager** at The Loctor Family of REALTORS® (Oct 2024 – May 2026, Remote, US)
+**Key traits:**
+- Bilingual: Spanish (Native), English (C1 - EF SET Certified C2 Proficient)
+- Passionate about clean code, user-centered design, and agile methodologies
+- Experience leading full-cycle projects from database design to responsive UI
+- Volunteer IT support at Venezuelan Red Cross (hardware recovery, network infra, digital literacy training)
+- AI-assisted development practitioner and prompt engineering enthusiast
 
-## Certifications
-- Google AI Essentials (Google Career Certificates)
-- Claude Code in Action (Anthropic)
-- EF SET English Certificate C2 Proficient (82/100)
-- Bash/Shell, terminal and command line from scratch (MoureDev)
+---
 
-## Volunteering
-IT Support Volunteer at Venezuelan Red Cross - Barquisimeto chapter (Aug 2025 – Dec 2025). Hardware recovery, network infrastructure renewal, technical documentation, and digital literacy training.
+## 🛠️ Technical Skills & Proficiencies
 
-## Contact
-- Email: penagoyosamueldavid@gmail.com
-- Phone: (+58) 424-5218811
-- GitHub: https://github.com/StonishVicer
-- LinkedIn: https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/
+### Programming Languages
+PHP, JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3, Python
+
+### Frontend Frameworks & Libraries
+React, Next.js, Vue.js (basic), Tailwind CSS, Bootstrap, Responsive Design
+
+### Backend & API Development
+Laravel / PHP, Node.js (Express), RESTful APIs, GraphQL, WordPress / Headless CMS
+
+### Databases & Storage
+PostgreSQL, MySQL, Supabase, Firebase, MongoDB (basic), SQL query optimization
+
+### DevOps, Cloud & Tools
+Git / GitHub / GitLab, Docker (basic), CI/CD (GitHub Actions), Vercel, Netlify, AWS (basic)
+
+### Methodologies & Professional Skills
+Agile (Scrum / Kanban), AI-assisted development, Technical SEO / Performance optimization, CRM Automation (HubSpot, GoHighLevel), Technical documentation
+
+---
+
+## 💼 Professional Experience
+
+### Full-Stack Developer Intern
+**Keycode Agencia Digital** | Remote, Mexico | Feb 2026 – May 2026
+- Developed a multi-tenant SaaS payroll module ("Dash") with Next.js and Supabase, implementing Row-Level Security (RLS) for data isolation across tenants
+- Built a corporate Wiki using Nextra JS and React, streamlining onboarding processes and knowledge transfer for new hires
+- Conducted technical SEO audits and configured CRM automations in GoHighLevel, improving sales response times
+
+### Web Developer & Community Manager
+**The Loctor Family of REALTORS®** | Remote, US | Oct 2024 – May 2026
+- Architected a custom real estate platform with WordPress and PHP, migrating legacy systems to an IDX-ready architecture
+- Integrated HubSpot CRM via REST APIs and custom email templates, resolving cross-browser CSS conflicts for full mobile adaptability
+- Managed digital presence and lead generation through asynchronous content workflows
+
+---
+
+## 🚀 Featured Project: TrainUP
+
+**TrainUP** is a comprehensive gym management SaaS platform built mobile-first. It centralizes memberships, bookings, payments, body metrics, and client communications into a single dashboard.
+
+### Core Features
+| Feature | Description |
+|---------|-------------|
+| **Membership Management** | Activate, renew, and manage subscription plans. Automated expiration reminders |
+| **Bookings & Schedules** | Flexible daily/hourly schedules. Real-time capacity by training profile |
+| **Integrated Payments** | Pago Móvil, Zelle, Binance, cash. Receipt uploads and admin approval workflow |
+| **Body Metrics Tracking** | Weight, abdomen, arms, legs, chest tracking. Month-over-month charts |
+| **Admin Dashboard** | Full panel for users, payments, bookings, metrics. Single-pane-of-glass operations |
+| **Client Portal** | Per-athlete profiles with payment history, bookings, metrics, progress tracking |
+| **Notifications** | Automated payment reminders, booking confirmations, expiration alerts |
+| **Security & Compliance** | Data encryption, HTTPS, daily backups, role-based access control |
+
+### Key Benefits
+- **Time Savings:** Automate billing, bookings, and reminders. Recover hours lost on manual admin
+- **Error Reduction:** Eliminate spreadsheets. Every transaction permanently recorded
+- **Retention Improvement:** Visible progress dashboards increase athlete adherence
+- **Multi-platform Access:** Web admin panel + mobile client portal, each role-optimized
+
+### Links
+- Landing Page: https://trainup.lat/
+- Live Demo: https://demo.trainup.lat/demo
+- **Admin Demo:** demo@trainup.lat / Demo123!
+- **Client Demo:** demo.user1@trainup.lat / password
+
+> **Note:** TrainUP is mobile-first and best viewed on mobile devices or via responsive developer tools in desktop browsers. The app is in active development and continuously updated.
+
+---
+
+## 📜 Certifications
+
+| Certification | Organization | Credential ID |
+|---------------|-------------|---------------|
+| Google AI Essentials | Google Career Certificates | 0952ea0b-0b17-4c88-a865-affc542312de |
+| Claude Code in Action | Anthropic | uv7e8yp69evp |
+| EF SET English Certificate C2 Proficient (82/100) | EF SET | 6dpZwX |
+| Bash/Shell, Terminal & Command Line from Scratch | MoureDev | 95icag7qfw |
+
+---
+
+## 🤝 Volunteering
+
+**IT Support Volunteer** — Venezuelan Red Cross, Barquisimeto Chapter (Aug 2025 – Dec 2025)
+- Hardware recovery: Diagnosed and refurbished aging workstations, harvesting viable components from decommissioned units
+- Network infrastructure: Inspected legacy 30+ year-old cabling and drafted a strategic renewal plan
+- Technical documentation: Authored SOPs and system manuals from scratch, reducing external IT dependency
+- Digital literacy: Designed workshops on secure web navigation and prompt engineering with generative AI tools, bridging generational technical gaps
+
+**Impact:** 12+ workstations restored · 4 workshops delivered · 20+ staff trained
+
+---
+
+## 🌐 Languages
+
+| Language | Proficiency | Certification |
+|----------|-------------|---------------|
+| Spanish | Native | - |
+| English | C2 Proficient | EF SET 82/100 |
+
+---
+
+## 📬 Contact & Social
+
+- **Email:** penagoyosamueldavid@gmail.com
+- **Phone:** (+58) 424-5218811
+- **Location:** Venezuela (Remote / Worldwide)
+- **GitHub:** https://github.com/StonishVicer
+- **LinkedIn:** https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/
+- **Portfolio:** https://samuel-pena-develop.vercel.app/
+
+---
+
+## 📄 Summary for AI Context
+
+Samuel Peña is a 21-year-old Venezuelan Full-Stack Developer with an Associate Degree in Computer Science (IUJO, 2026). He specializes in PHP/Laravel and React/Next.js ecosystems with PostgreSQL. His professional experience spans SaaS development, real estate platforms, CRM integrations, SEO, and technical project management. He is bilingual (EN/ES C2), volunteers in IT for social impact, and actively builds AI-assisted development workflows. His main portfolio project is TrainUP, a mobile-first gym management SaaS.
