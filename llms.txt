@@ -126,7 +126,7 @@ Agile (Scrum / Kanban), AI-assisted development, Technical SEO / Performance opt
 - **Location:** Venezuela (Remote / Worldwide)
 - **GitHub:** https://github.com/StonishVicer
 - **LinkedIn:** https://www.linkedin.com/in/samuel-david-pe%C3%B1a-goyo-176348305/
-- **Portfolio:** https://samuel-pena-develop.vercel.app/
+- **Portfolio:** https://stonishdev.me/
 
 ---
 
