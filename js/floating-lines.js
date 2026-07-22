@@ -411,8 +411,8 @@ export default function initFloatingLines(container, options = {}) {
   };
 
   if (interactive) {
-    renderer.domElement.addEventListener('pointermove', handlePointerMove);
-    renderer.domElement.addEventListener('pointerleave', handlePointerLeave);
+    document.addEventListener('pointermove', handlePointerMove);
+    document.addEventListener('pointerleave', handlePointerLeave);
   }
 
   let raf = 0;
@@ -480,8 +480,8 @@ export default function initFloatingLines(container, options = {}) {
     if (ro) ro.disconnect();
 
     if (interactive) {
-      renderer.domElement.removeEventListener('pointermove', handlePointerMove);
-      renderer.domElement.removeEventListener('pointerleave', handlePointerLeave);
+      document.removeEventListener('pointermove', handlePointerMove);
+      document.removeEventListener('pointerleave', handlePointerLeave);
     }
 
     geometry.dispose();
